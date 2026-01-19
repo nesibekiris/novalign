@@ -23,13 +23,11 @@ export function Services() {
       id: 'strategy',
       title: 'AI Strategy & Maturity',
       intro:
-        'We help organizations understand where they are with AI, where they should go, and how to build capabilities responsibly.',
+        'We help organizations understand where they are with AI, where they should go, and how to build capabilities that balance innovation with responsibility.',
       items: [
-        'AI maturity assessments and diagnostics',
-        'Strategic AI roadmaps and portfolio design',
-        'AI operating models, roles and decision-rights',
-        'AI capability and talent strategy',
-        'Integration of AI with business strategy and innovation',
+        'AI maturity assessments and diagnostics.',
+        'AI roadmaps aligned with business and public value.',
+        'AI operating models, roles and decision-rights for AI.',
       ],
     },
     {
@@ -38,11 +36,9 @@ export function Services() {
       intro:
         'We design governance and ethics frameworks that make AI use accountable, transparent and aligned with your values – and we build the literacy to make them real.',
       items: [
-        'AI governance frameworks (principles, committees, processes, documentation)',
-        'Ethical guidelines, review boards and decision-making flows',
-        'AI literacy programs and trainings for executives, boards and teams',
-        'Risk assessment and mitigation frameworks for AI systems',
-        'Ongoing governance support and advisory',
+        'AI governance frameworks, principles and processes.',
+        'Ethical guidelines and review mechanisms across the AI lifecycle.',
+        'AI literacy and capability programs for leaders, boards and teams.',
       ],
     },
     {
@@ -51,11 +47,9 @@ export function Services() {
       intro:
         'We bring research-led clarity to AI and technology markets and the evolving policy environment.',
       items: [
-        'Research on AI and tech markets, use cases and societal impacts',
-        'Monitoring and analysis of AI and tech policy and regulation',
-        'Reports, explainers, policy papers and internal briefings',
-        'Horizon scanning and trend analysis',
-        'Custom research projects tailored to your needs',
+        'Research on AI and technology markets, trends and use cases.',
+        'Analysis of AI and tech policy and regulatory landscapes.',
+        'Reports, explainers, briefings and policy papers.',
       ],
     },
     {
@@ -64,11 +58,9 @@ export function Services() {
       intro:
         'We help organizations engage constructively with regulators, policymakers and ecosystems around AI and technology.',
       items: [
-        'AI and tech policy advisory and scenario analysis',
-        'Stakeholder mapping and engagement strategies',
-        'Support for public consultations, hearings and multi-stakeholder processes',
-        'Policy position development and advocacy strategy',
-        'Regulatory readiness and compliance planning',
+        'AI and tech policy advisory.',
+        'Stakeholder mapping and engagement strategies.',
+        'Support for consultations, hearings and multi-stakeholder processes.',
       ],
     },
   ];
@@ -79,8 +71,7 @@ export function Services() {
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h1 className="text-4xl sm:text-5xl font-semibold mb-6">Services</h1>
           <p className="text-xl text-gray-300 leading-relaxed">
-            We work at the intersection of AI strategy, governance, research and policy – helping organizations align AI
-            with their values, strategy and the public interest.
+            Stratri works at the intersection of technology, society and policy – helping organizations turn AI governance and responsible technology into strategic advantage.
           </p>
         </div>
       </section>
@@ -121,7 +112,7 @@ export function Services() {
               Ready to work together?
             </h2>
             <p className="text-lg text-gray-700 mb-8 max-w-2xl mx-auto">
-              Let's discuss how we can help your organization align AI with strategy, governance and policy.
+              Let's discuss how Stratri can help your organization navigate the intersection of technology, society and policy.
             </p>
             <Button href="/connect">Get in touch</Button>
           </div>

@@ -19,7 +19,7 @@ export function Home() {
       points: [
         'AI maturity assessments and diagnostics.',
         'AI roadmaps aligned with business and public value.',
-        'Operating models, roles and decision-rights for AI.',
+        'AI operating models, roles and decision-rights for AI.',
       ],
       link: '/services#strategy',
     },
@@ -28,7 +28,7 @@ export function Home() {
       points: [
         'AI governance frameworks, principles and processes.',
         'Ethical guidelines and review mechanisms across the AI lifecycle.',
-        'AI literacy and capability programs for leaders and teams.',
+        'AI literacy and capability programs for leaders, boards and teams.',
       ],
       link: '/services#governance',
     },
@@ -37,16 +37,16 @@ export function Home() {
       points: [
         'Research on AI and technology markets, trends and use cases.',
         'Analysis of AI and tech policy and regulatory landscapes.',
-        'Briefings, explainers, reports and policy papers.',
+        'Reports, explainers, briefings and policy papers.',
       ],
       link: '/services#research',
     },
     {
       title: 'Policy & Government Affairs',
       points: [
-        'AI and tech policy advisory for organizations and ecosystems.',
+        'AI and tech policy advisory.',
         'Stakeholder mapping and engagement strategies.',
-        'Support for public consultations, hearings and multi-stakeholder processes.',
+        'Support for consultations, hearings and multi-stakeholder processes.',
       ],
       link: '/services#policy',
     },
@@ -92,14 +92,13 @@ export function Home() {
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="max-w-4xl mx-auto text-center mb-12">
             <p className="text-sm font-medium text-navy mb-4 tracking-wide uppercase">
-              AI Governance & Policy Studio
+              AI Governance & Responsible Technology Consultancy
             </p>
             <h1 className="text-4xl sm:text-5xl lg:text-6xl font-semibold text-navy mb-6 leading-tight">
-              Aligning organizations with AI and technology – through strategy, governance and policy.
+              Technology. Society. Policy. Strategized.
             </h1>
             <p className="text-lg sm:text-xl text-gray-700 mb-10 leading-relaxed">
-              Novalign works with organizations to shape AI strategy and maturity, design AI governance and ethics,
-              build AI literacy, and navigate AI and technology policy with depth and clarity.
+              Stratri works at the intersection of technology, society and policy – turning AI governance and responsible technology into a strategic advantage. We believe that governance and ethics are not constraints, but the foundation for sustainable competitive advantage.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
               <Button href="/connect">Let's talk</Button>
@@ -122,8 +121,7 @@ export function Home() {
                 <Linkedin className="text-blue-soft flex-shrink-0 mt-1" size={24} />
                 <div>
                   <p className="text-sm text-gray-800 mb-3">
-                    <span className="font-medium">You discovered Novalign on LinkedIn.</span> Here's how we turn ideas
-                    into strategy, governance and literacy with organizations.
+                    <span className="font-medium">You discovered Stratri on LinkedIn.</span> Here's how we help organizations navigate the intersection of technology, society and policy.
                   </p>
                   <button
                     onClick={() => scrollToSection('what-we-do')}
@@ -143,7 +141,7 @@ export function Home() {
           <div className="text-center mb-12">
             <h2 className="text-3xl sm:text-4xl font-semibold text-navy mb-4">What we do</h2>
             <p className="text-lg text-gray-700 max-w-3xl mx-auto">
-              Four core pillars at the intersection of AI strategy, governance, research and policy.
+              Four core pillars where technology, society and policy converge into strategic advantage.
             </p>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6 lg:gap-8">
@@ -212,8 +210,8 @@ export function Home() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex items-center justify-between mb-12">
             <div>
-              <h2 className="text-3xl sm:text-4xl font-semibold text-navy mb-2">Latest from Novalign</h2>
-              <p className="text-gray-700">Deep thinking on AI governance, policy and literacy.</p>
+              <h2 className="text-3xl sm:text-4xl font-semibold text-navy mb-2">Latest from Stratri</h2>
+              <p className="text-gray-700">Deep thinking on AI governance, responsible technology and policy.</p>
             </div>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-8">
@@ -228,7 +226,7 @@ export function Home() {
                 </div>
                 <h3 className="text-xl font-semibold mb-3">Techletter</h3>
                 <p className="text-gray-200 leading-relaxed mb-4">
-                  Our newsletter on AI governance, policy, markets and literacy. Deep dives delivered to your inbox.
+                  Stratri's newsletter on AI governance, responsible technology, policy and literacy. Deep dives delivered to your inbox.
                 </p>
               </div>
               <div className="pt-4">

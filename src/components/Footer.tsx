@@ -9,9 +9,9 @@ export function Footer() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-8">
           <div>
-            <h3 className="text-lg font-semibold mb-3">Novalign</h3>
+            <h3 className="text-lg font-semibold mb-3">Stratri</h3>
             <p className="text-sm text-gray-300 leading-relaxed">
-              An AI governance & policy studio working at the intersection of strategy, ethics, literacy and public policy.
+              AI Governance & Responsible Technology Consultancy
             </p>
           </div>
 
@@ -55,7 +55,7 @@ export function Footer() {
                 <Linkedin size={24} />
               </a>
               <a
-                href="mailto:hello@novalign.studio"
+                href="mailto:hello@stratri.com"
                 className="text-gray-300 hover:text-blue-soft transition-colors"
                 aria-label="Email"
               >
@@ -67,7 +67,7 @@ export function Footer() {
 
         <div className="border-t border-navy-light pt-6 text-center">
           <p className="text-sm text-gray-400">
-            © {currentYear} Novalign. All rights reserved.
+            © {currentYear} Stratri. All rights reserved.
           </p>
         </div>
       </div>

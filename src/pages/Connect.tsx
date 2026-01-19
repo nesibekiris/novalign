@@ -37,7 +37,7 @@ export function Connect() {
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h1 className="text-4xl sm:text-5xl font-semibold mb-6">Connect</h1>
           <p className="text-xl text-gray-300 leading-relaxed">
-            Reach out to discuss how we can support your organization with AI strategy, governance, research or policy.
+            Connect with Stratri for conversations on AI governance, responsible technology and policy.
           </p>
         </div>
       </section>
@@ -156,8 +156,8 @@ export function Connect() {
                   <div>
                     <div className="flex items-center gap-3 text-gray-700">
                       <Mail size={20} className="text-blue-soft" />
-                      <a href="mailto:hello@novalign.studio" className="hover:text-blue-soft transition-colors">
-                        hello@novalign.studio
+                      <a href="mailto:hello@stratri.com" className="hover:text-blue-soft transition-colors">
+                        Email
                       </a>
                     </div>
                   </div>
@@ -170,7 +170,7 @@ export function Connect() {
                         rel="noopener noreferrer"
                         className="hover:text-blue-soft transition-colors"
                       >
-                        Connect on LinkedIn
+                        LinkedIn
                       </a>
                     </div>
                   </div>
@@ -178,7 +178,7 @@ export function Connect() {
                     <div className="flex items-center gap-3 text-gray-700">
                       <BookOpen size={20} className="text-blue-soft" />
                       <a href="/techletter" className="hover:text-blue-soft transition-colors">
-                        Read Techletter
+                        Substack / Techletter
                       </a>
                     </div>
                   </div>

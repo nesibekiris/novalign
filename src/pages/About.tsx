@@ -5,24 +5,24 @@ import { Linkedin } from 'lucide-react';
 export function About() {
   const principles = [
     {
+      title: 'Technology, Society, Policy',
+      description:
+        'We work where these three forces converge. Sustainable technology strategy requires navigating technical capability, societal impact, and policy constraints with equal rigor.',
+    },
+    {
+      title: 'Governance as strategy',
+      description:
+        'Responsible technology and AI governance are not compliance burdens – they are strategic advantages. Organizations that govern well move faster and with greater confidence.',
+    },
+    {
       title: 'Depth over hype',
       description:
-        'We prioritize nuance and long-term thinking over fashion and buzzwords. AI is complex, and good strategy and governance require deep understanding, not shallow excitement.',
+        'We prioritize nuance and long-term thinking over fashion and buzzwords. Turning complexity into clarity requires deep understanding, not shallow excitement.',
     },
     {
-      title: 'Alignment over speed',
+      title: 'Literacy as foundation',
       description:
-        'We care about moving in the right direction, not just faster. Technology must be aligned with organizational values, societal interests, and ethical foundations.',
-    },
-    {
-      title: 'Ethics as infrastructure',
-      description:
-        'Ethics and governance are built into systems and processes, not added on top. They are foundational infrastructure, not afterthoughts or compliance exercises.',
-    },
-    {
-      title: 'Literacy as power',
-      description:
-        'AI literacy is how leaders and teams gain real agency in AI decisions. Without understanding, there can be no meaningful governance, accountability or strategic clarity.',
+        'AI literacy is how leaders and teams gain real agency. Without understanding across the organization, there can be no meaningful governance, accountability or strategic clarity.',
     },
   ];
 
@@ -51,9 +51,9 @@ export function About() {
     <div className="min-h-screen bg-light">
       <section className="bg-navy text-white py-20">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h1 className="text-4xl sm:text-5xl font-semibold mb-6">About Novalign</h1>
+          <h1 className="text-4xl sm:text-5xl font-semibold mb-6">About Stratri</h1>
           <p className="text-xl text-gray-300 leading-relaxed">
-            A studio working at the intersection of AI strategy, governance, ethics, literacy and policy.
+            AI Governance & Responsible Technology Consultancy
           </p>
         </div>
       </section>
@@ -64,19 +64,13 @@ export function About() {
             <h2 className="text-3xl font-semibold text-navy mb-6">Our purpose</h2>
             <div className="prose prose-lg max-w-none">
               <p className="text-gray-700 leading-relaxed mb-4">
-                Novalign exists to help organizations align AI and technology with their values, strategy, and the
-                public interest. We work where innovation meets responsibility – designing the structures, frameworks,
-                and capabilities that make AI both powerful and trustworthy.
+                Stratri works at the intersection of technology, society and policy – where responsible AI governance becomes a strategic advantage. We help organizations navigate complexity by building governance structures, literacy programs, and policy strategies that turn ethical technology into competitive strength.
               </p>
               <p className="text-gray-700 leading-relaxed mb-4">
-                We believe that good AI governance is not about slowing down, but about moving in the right direction.
-                It requires deep understanding, thoughtful design, and real literacy across leadership and teams. It
-                demands a balance between enabling innovation and ensuring accountability, transparency, and ethics.
+                We believe that responsible technology and AI governance are not constraints, but the foundation for sustainable competitive advantage. Strategic governance of the technology-society-policy triad enables organizations to move with confidence, not fear. Good governance is not about slowing down – it's about moving in the right direction with clarity and purpose.
               </p>
               <p className="text-gray-700 leading-relaxed">
-                As both a thought and consulting studio, we produce research, frameworks, and literacy resources – and
-                we work hands-on with organizations to design and embed AI strategy, governance, and policy approaches
-                that actually work in practice.
+                Through our work in strategy, governance, research and policy, we help technology companies and institutions build the frameworks, capabilities and understanding needed to thrive at the convergence of innovation and responsibility.
               </p>
             </div>
           </div>
@@ -88,7 +82,7 @@ export function About() {
           <div className="text-center mb-12">
             <h2 className="text-3xl sm:text-4xl font-semibold text-navy mb-4">Our principles</h2>
             <p className="text-lg text-gray-700 max-w-3xl mx-auto">
-              The values that guide our work and shape our approach to AI governance and policy.
+              The values that guide our work and shape our approach to responsible technology.
             </p>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">

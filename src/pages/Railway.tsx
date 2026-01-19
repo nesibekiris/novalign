@@ -38,7 +38,7 @@ export function Railway() {
         <div className="relative max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h1 className="text-4xl sm:text-5xl font-semibold mb-6">Railway</h1>
           <p className="text-xl text-gray-300 leading-relaxed">
-            Our AI governance and maturity framework
+            Stratri's AI Governance & Maturity Framework
           </p>
         </div>
       </section>
@@ -50,19 +50,13 @@ export function Railway() {
             <h2 className="text-3xl font-semibold text-navy mb-6">The Railway metaphor</h2>
             <div className="prose prose-lg max-w-none">
               <p className="text-gray-700 leading-relaxed mb-4">
-                The Railway framework represents the essential infrastructure that allows organizations to move forward
-                with AI – steadily, safely, and in the right direction. Just as a railway provides structure,
-                direction, and safety for movement, AI governance and maturity provide the foundation for organizations
-                to deploy AI responsibly and effectively.
+                Railway is Stratri's framework for AI governance and maturity. It treats governance as the rail infrastructure that lets organizations move with confidence at the intersection of technology, society and policy. Just as a railway provides structure, direction, and safety for movement, AI governance provides the foundation for organizations to deploy technology responsibly and strategically.
               </p>
               <p className="text-gray-700 leading-relaxed mb-4">
-                Without proper rails, there's risk of derailment. Without governance and maturity, organizations face
-                ethical failures, compliance issues, reputational damage, and missed opportunities. The Railway
-                framework helps organizations build the structures, processes, and capabilities they need.
+                Without proper rails, there's risk of derailment. Without governance and maturity, organizations face ethical failures, compliance issues, reputational damage, and missed opportunities. Railway helps organizations build the structures, processes, and capabilities they need to turn responsible technology into competitive advantage.
               </p>
               <p className="text-gray-700 leading-relaxed">
-                At the heart of Railway is <span className="font-semibold text-navy">RAIL</span> – a comprehensive
-                approach covering Risk & Responsibility, Alignment, Insight & Literacy, and Lifecycles & Regulation.
+                At the heart of Railway is <span className="font-semibold text-navy">RAIL</span> – a comprehensive approach covering Risk & Responsibility, Alignment, Insight & Literacy, and Lifecycles & Regulation. These four pillars enable strategic governance across the technology-society-policy triad.
               </p>
             </div>
           </div>
@@ -126,24 +120,21 @@ export function Railway() {
             <Card>
               <h3 className="text-xl font-semibold text-navy mb-3">Maturity Assessments</h3>
               <p className="text-gray-700 leading-relaxed">
-                We use the RAIL framework to diagnose where organizations are in their AI journey – identifying
-                strengths, gaps, and priorities across risk management, alignment, literacy, and lifecycle governance.
+                Stratri uses the RAIL framework to assess where organizations are in their AI journey – identifying strengths, gaps, and priorities across risk management, alignment, literacy, and lifecycle governance.
               </p>
             </Card>
 
             <Card>
               <h3 className="text-xl font-semibold text-navy mb-3">Governance Design</h3>
               <p className="text-gray-700 leading-relaxed">
-                Railway guides the design of governance structures, ensuring comprehensive coverage of risk,
-                alignment, insight, and regulatory dimensions – tailored to organizational context and ambition.
+                Railway guides the design of governance structures, ensuring comprehensive coverage of risk, alignment, insight, and regulatory dimensions – tailored to organizational context and strategic ambition.
               </p>
             </Card>
 
             <Card>
               <h3 className="text-xl font-semibold text-navy mb-3">Training & Literacy</h3>
               <p className="text-gray-700 leading-relaxed">
-                We structure AI literacy programs around RAIL, helping teams understand not just what AI is, but how
-                to govern it, align it with values, and navigate the full AI lifecycle.
+                Stratri structures AI literacy programs around RAIL, helping teams understand how to govern technology, align it with values, and navigate the full AI lifecycle across technology, society and policy.
               </p>
             </Card>
           </div>
@@ -155,8 +146,7 @@ export function Railway() {
           <div className="bg-white rounded-lg p-12 shadow-sm">
             <h2 className="text-3xl font-semibold text-navy mb-4">Apply Railway to your organization</h2>
             <p className="text-lg text-gray-700 mb-8 max-w-2xl mx-auto leading-relaxed">
-              Learn how the Railway framework can help you build stronger AI governance, assess your maturity, and
-              develop the capabilities you need.
+              Learn how Stratri's Railway framework can help you build stronger AI governance, assess your maturity, and develop the capabilities you need to thrive at the intersection of technology, society and policy.
             </p>
             <Button href="/connect">Get in touch</Button>
           </div>

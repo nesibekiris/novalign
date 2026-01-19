@@ -65,7 +65,7 @@ export function Techletter() {
         <div className="relative max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h1 className="text-4xl sm:text-5xl font-semibold mb-6">Techletter</h1>
           <p className="text-xl text-gray-300 leading-relaxed">
-            Novalign's newsletter on AI governance, policy, markets and literacy
+            Stratri's newsletter on AI governance, responsible technology, policy and literacy
           </p>
         </div>
       </section>
@@ -76,13 +76,10 @@ export function Techletter() {
             <h2 className="text-3xl font-semibold text-navy mb-6">About Techletter</h2>
             <div className="prose prose-lg max-w-none">
               <p className="text-gray-700 leading-relaxed mb-4">
-                Techletter brings depth and clarity to the complex landscape of AI governance, policy, and technology.
-                It's where we share analysis, research insights, and practical frameworks for leaders and teams
-                navigating AI and technology.
+                Techletter is Stratri's newsletter on AI governance, responsible technology, policy and literacy. It brings depth and clarity to the complex landscape where technology, society and policy converge – sharing analysis, research insights, and practical frameworks for leaders and teams.
               </p>
               <p className="text-gray-700 leading-relaxed">
-                Published regularly, Techletter covers governance frameworks, policy developments, market trends, and
-                AI literacy – always with a focus on depth over hype, and practical application over abstract theory.
+                Published regularly, Techletter covers governance frameworks, policy developments, market trends, and AI literacy – always with a focus on depth over hype, and practical application over abstract theory.
               </p>
             </div>
           </div>
@@ -127,14 +124,14 @@ export function Techletter() {
             )}
 
             <div className="text-center pt-6 border-t border-gray-100">
-              <p className="text-gray-700 mb-4">Or read on Substack</p>
+              <p className="text-gray-700 mb-4">Read on Substack</p>
               <a
                 href="https://substack.com"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="inline-flex items-center gap-2 px-6 py-3 bg-light text-navy font-medium rounded-sm hover:bg-light-dark transition-colors"
               >
-                Visit Techletter on Substack
+                Read on Substack
                 <ExternalLink size={16} />
               </a>
             </div>
