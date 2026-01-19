@@ -107,6 +107,23 @@ export function Services() {
             ))}
           </div>
 
+          <div className="mt-20">
+            <div className="bg-gradient-to-br from-navy to-navy-light text-white rounded-lg p-8 lg:p-12 shadow-lg">
+              <div className="max-w-3xl mx-auto text-center">
+                <h2 className="text-3xl font-semibold mb-4">Railway – AI Governance & Maturity Framework</h2>
+                <p className="text-xl text-gray-200 mb-6 leading-relaxed">
+                  Railway is Stratri's framework for assessing AI maturity and designing governance at the intersection of Technology, Society and Policy.
+                </p>
+                <p className="text-gray-300 mb-8 leading-relaxed">
+                  It provides a comprehensive approach to understanding where organizations are in their AI journey and building the governance structures, processes, and capabilities they need to move with confidence.
+                </p>
+                <Button href="/railway" className="bg-white text-navy hover:bg-light">
+                  Explore Railway framework
+                </Button>
+              </div>
+            </div>
+          </div>
+
           <div className="mt-20 text-center bg-light-bg rounded-lg p-12">
             <h2 className="text-2xl sm:text-3xl font-semibold text-navy mb-4">
               Ready to work together?

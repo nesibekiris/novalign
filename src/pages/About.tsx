@@ -1,6 +1,5 @@
 import { Button } from '../components/Button';
 import { Card } from '../components/Card';
-import { Linkedin } from 'lucide-react';
 
 export function About() {
   const principles = [
@@ -26,26 +25,6 @@ export function About() {
     },
   ];
 
-  const team = [
-    {
-      name: 'Dr. Sarah Chen',
-      role: 'Founder & Principal',
-      bio: 'Former AI policy advisor with 12 years across government, tech, and civil society. Expert in AI governance frameworks and regulatory strategy.',
-      linkedin: 'https://www.linkedin.com',
-    },
-    {
-      name: 'Marcus Thompson',
-      role: 'Senior Advisor, Strategy & Maturity',
-      bio: 'Tech executive turned consultant specializing in AI transformation and organizational capability building across Fortune 500 companies.',
-      linkedin: 'https://www.linkedin.com',
-    },
-    {
-      name: 'Dr. Amina Okafor',
-      role: 'Senior Researcher',
-      bio: 'Research fellow focused on AI ethics, algorithmic fairness, and the societal impacts of machine learning systems.',
-      linkedin: 'https://www.linkedin.com',
-    },
-  ];
 
   return (
     <div className="min-h-screen bg-light">
@@ -61,16 +40,28 @@ export function About() {
       <section className="py-20">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="bg-white rounded-lg p-8 lg:p-12 shadow-sm mb-12">
-            <h2 className="text-3xl font-semibold text-navy mb-6">Our purpose</h2>
+            <h2 className="text-3xl font-semibold text-navy mb-6">About Stratri</h2>
             <div className="prose prose-lg max-w-none">
               <p className="text-gray-700 leading-relaxed mb-4">
-                Stratri works at the intersection of technology, society and policy – where responsible AI governance becomes a strategic advantage. We help organizations navigate complexity by building governance structures, literacy programs, and policy strategies that turn ethical technology into competitive strength.
+                Stratri is an AI governance and responsible technology consultancy. It works at the intersection of technology, society and policy, helping organizations turn governance, ethics and policy into strategic advantage.
               </p>
               <p className="text-gray-700 leading-relaxed mb-4">
-                We believe that responsible technology and AI governance are not constraints, but the foundation for sustainable competitive advantage. Strategic governance of the technology-society-policy triad enables organizations to move with confidence, not fear. Good governance is not about slowing down – it's about moving in the right direction with clarity and purpose.
+                Stratri supports technology companies, public institutions and civil society organizations that need to navigate AI maturity, governance frameworks, and fast-moving policy environments. The firm believes that responsible technology and AI governance are not constraints, but the foundation for sustainable competitive advantage.
               </p>
               <p className="text-gray-700 leading-relaxed">
-                Through our work in strategy, governance, research and policy, we help technology companies and institutions build the frameworks, capabilities and understanding needed to thrive at the convergence of innovation and responsibility.
+                The firm combines strategic advisory, research, literacy and policy work into a single, integrated practice. Through this approach, Stratri helps organizations build the frameworks, capabilities and understanding needed to thrive at the convergence of innovation and responsibility.
+              </p>
+            </div>
+          </div>
+
+          <div className="bg-white rounded-lg p-8 lg:p-12 shadow-sm mb-12">
+            <h2 className="text-3xl font-semibold text-navy mb-6">Founder & Principal</h2>
+            <div className="prose prose-lg max-w-none">
+              <p className="text-gray-700 leading-relaxed mb-4">
+                <span className="font-semibold text-navy">Alex Durand</span> is the founder and principal at Stratri, bringing over a decade of experience working at the intersection of technology, policy, and governance. With a background spanning technology companies, public sector organizations, and international civil society, Alex has advised on AI strategy, digital policy, and governance frameworks across Europe, North America, and Asia.
+              </p>
+              <p className="text-gray-700 leading-relaxed">
+                Alex's work focuses on building bridges between engineers, policymakers and society so that AI systems are governed responsibly and deliver long-term value. This commitment to connecting technical capability, societal impact, and policy reality is at the heart of Stratri's approach to the technology-society-policy triad.
               </p>
             </div>
           </div>
@@ -96,50 +87,13 @@ export function About() {
         </div>
       </section>
 
-      <section className="py-20">
-        <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-12">
-            <h2 className="text-3xl sm:text-4xl font-semibold text-navy mb-4">Team</h2>
-            <p className="text-lg text-gray-700 max-w-3xl mx-auto">
-              Experts across AI strategy, governance, ethics, research and policy.
-            </p>
-          </div>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-            {team.map((member, index) => (
-              <Card key={index} className="text-center">
-                <div className="w-20 h-20 bg-light rounded-full mx-auto mb-4 flex items-center justify-center">
-                  <span className="text-2xl font-semibold text-navy">
-                    {member.name
-                      .split(' ')
-                      .map((n) => n[0])
-                      .join('')}
-                  </span>
-                </div>
-                <h3 className="text-xl font-semibold text-navy mb-1">{member.name}</h3>
-                <p className="text-sm text-blue-soft font-medium mb-3">{member.role}</p>
-                <p className="text-sm text-gray-700 leading-relaxed mb-4">{member.bio}</p>
-                <a
-                  href={member.linkedin}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="inline-flex items-center text-navy hover:text-blue-soft transition-colors"
-                  aria-label={`${member.name} on LinkedIn`}
-                >
-                  <Linkedin size={20} />
-                </a>
-              </Card>
-            ))}
-          </div>
-        </div>
-      </section>
 
       <section className="py-20 bg-light-bg">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <div className="bg-white rounded-lg p-12 shadow-sm">
-            <h2 className="text-3xl font-semibold text-navy mb-4">Work with us</h2>
+            <h2 className="text-3xl font-semibold text-navy mb-4">Work with Stratri</h2>
             <p className="text-lg text-gray-700 mb-8 max-w-2xl mx-auto leading-relaxed">
-              Whether you need strategic advisory, governance design, research, or AI literacy programs – let's explore
-              how we can support your organization.
+              Whether you need strategic advisory, governance design, research, or AI literacy programs – let's explore how Stratri can support your organization at the intersection of technology, society and policy.
             </p>
             <Button href="/connect">Get in touch</Button>
           </div>
