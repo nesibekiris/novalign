@@ -92,7 +92,7 @@ export function Home() {
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="max-w-4xl mx-auto text-center mb-12">
             <p className="text-sm font-medium text-navy mb-4 tracking-wide uppercase">
-              AI Governance & Responsible Technology Consultancy
+              Technology Policy & AI governance Consultancy
             </p>
             <h1 className="text-4xl sm:text-5xl lg:text-6xl font-semibold text-navy mb-6 leading-tight">
               Technology. Society. Policy. Strategized.

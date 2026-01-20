@@ -156,8 +156,8 @@ export function Contact() {
                   <div>
                     <div className="flex items-center gap-3 text-gray-700">
                       <Mail size={20} className="text-amber" />
-                      <a href="mailto:hello@novalign.studio" className="hover:text-amber transition-colors">
-                        hello@novalign.studio
+                      <a href="mailto:nesibe@stratri.com" className="hover:text-amber transition-colors">
+                        nesibe@stratri.com
                       </a>
                     </div>
                   </div>
@@ -165,7 +165,7 @@ export function Contact() {
                     <div className="flex items-center gap-3 text-gray-700">
                       <Linkedin size={20} className="text-amber" />
                       <a
-                        href="https://www.linkedin.com"
+                        href="https://www.linkedin.com/in/nesibekiris/"
                         target="_blank"
                         rel="noopener noreferrer"
                         className="hover:text-amber transition-colors"

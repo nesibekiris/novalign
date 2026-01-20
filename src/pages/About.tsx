@@ -32,7 +32,7 @@ export function About() {
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h1 className="text-4xl sm:text-5xl font-semibold mb-6">About Stratri</h1>
           <p className="text-xl text-gray-300 leading-relaxed">
-            AI Governance & Responsible Technology Consultancy
+            Technology Policy & AI governance Consultancy
           </p>
         </div>
       </section>
@@ -55,13 +55,25 @@ export function About() {
           </div>
 
           <div className="bg-white rounded-lg p-8 lg:p-12 shadow-sm mb-12">
-            <h2 className="text-3xl font-semibold text-navy mb-6">Founder & Principal</h2>
+            <h2 className="text-3xl font-semibold text-navy mb-6">Managing Partner</h2>
             <div className="prose prose-lg max-w-none">
               <p className="text-gray-700 leading-relaxed mb-4">
-                <span className="font-semibold text-navy">Alex Durand</span> is the founder and principal at Stratri, bringing over a decade of experience working at the intersection of technology, policy, and governance. With a background spanning technology companies, public sector organizations, and international civil society, Alex has advised on AI strategy, digital policy, and governance frameworks across Europe, North America, and Asia.
+                <span className="font-semibold text-navy">Nesibe Kırış Can</span> is a consultant and researcher specializing in AI governance, public policy, and emerging technology regulation. With a background in law and sociology, she helps organizations build responsible AI systems, strengthen regulatory alignment, and design governance frameworks that balance innovation with societal impact.
+              </p>
+              <p className="text-gray-700 leading-relaxed mb-4">
+                She serves as a Responsible AI Consultant at Pandora's Global AI Enablement team, advising on AI governance architecture, ethical risk management, and compliance readiness. In addition to her corporate advisory work, she collaborates with international research institutions as a Research Fellow, contributing to global analyses on democratic governance, digital policy, and the societal implications of AI. She holds the AI Governance Professional certification and has completed executive programs in AI governance and technology policy at Oxford and Cambridge.
+              </p>
+              <p className="text-gray-700 leading-relaxed mb-4">
+                Earlier, Kırış Can led public policy and corporate affairs initiatives for multinational technology companies. At the American Chamber of Commerce Türkiye, where she advanced to Government Affairs Director, she represented over 140 global firms on strategic policy issues. She led high-level delegations, co-developed national policy recommendations, and launched the HBR Türkiye AI Webinar Series to strengthen dialogue between industry and government.
+              </p>
+              <p className="text-gray-700 leading-relaxed mb-4">
+                Before that, she began her professional journey at Ussal Consultancy, focusing on technology regulation and digital transformation policy. She later played a central role as Corporate and Public Affairs Lead at Istanbul's first Web3 hub, where she established international partnerships, supported early-stage startups, and helped grow a community of more than 450 innovators across blockchain and AI.
+              </p>
+              <p className="text-gray-700 leading-relaxed mb-4">
+                Kırış Can is the founder of TechLetter, a global technology policy newsletter followed by more than 7,900 readers from over 65 countries. Her writing and commentary appear widely, including in Harvard Business Review Türkiye, CoinDesk, and numerous international and local media outlets. She regularly provides insights on AI governance, blockchain regulation, and the evolving digital economy.
               </p>
               <p className="text-gray-700 leading-relaxed">
-                Alex's work focuses on building bridges between engineers, policymakers and society so that AI systems are governed responsibly and deliver long-term value. This commitment to connecting technical capability, societal impact, and policy reality is at the heart of Stratri's approach to the technology-society-policy triad.
+                She has mentored over a dozen startups through programs such as Hackquarters and Başlangıç Noktası, advising on regulatory strategy, scaling, and responsible innovation. Kırış Can has spoken at more than 30 global and regional events—including Bloomberg and CNBC-e—and delivers training programs on AI ethics, governance, and emerging tech regulation to corporate teams, policymakers, and civil society organizations.
               </p>
             </div>
           </div>

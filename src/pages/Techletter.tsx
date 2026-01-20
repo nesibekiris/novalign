@@ -126,7 +126,7 @@ export function Techletter() {
             <div className="text-center pt-6 border-t border-gray-100">
               <p className="text-gray-700 mb-4">Read on Substack</p>
               <a
-                href="https://substack.com"
+                href="https://techletter.co"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="inline-flex items-center gap-2 px-6 py-3 bg-light text-navy font-medium rounded-sm hover:bg-light-dark transition-colors"
@@ -156,7 +156,7 @@ export function Techletter() {
                     <span className="inline-block text-sm text-gray-500">{issue.date}</span>
                   </div>
                   <a
-                    href="https://substack.com"
+                    href="https://techletter.co"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="flex-shrink-0 inline-flex items-center gap-2 text-sm font-medium text-navy hover:text-blue-soft transition-colors"
@@ -171,8 +171,8 @@ export function Techletter() {
 
           <div className="text-center mt-12">
             <Button
-              href="https://substack.com"
-              onClick={() => window.open('https://substack.com', '_blank')}
+              href="https://techletter.co"
+              onClick={() => window.open('https://techletter.co', '_blank')}
             >
               Browse all issues
             </Button>
