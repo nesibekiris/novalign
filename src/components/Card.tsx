@@ -9,12 +9,8 @@ interface CardProps {
 export function Card({ children, className = '' }: CardProps) {
   return (
     <div className={`
-      bg-white rounded-lg p-6
-      shadow-[0_4px_0_0_rgba(2,31,91,0.1),0_6px_20px_-4px_rgba(2,31,91,0.15)]
-      hover:shadow-[0_6px_0_0_rgba(128,177,210,0.15),0_10px_28px_-4px_rgba(128,177,210,0.25)]
-      hover:-translate-y-1
-      transition-all duration-300
-      border border-gray-100
+      bg-white rounded-sm p-8 border border-stratri-divider
+      hover:border-stratri-light transition-all duration-200
       ${className}
     `}>
       {children}
@@ -30,21 +26,18 @@ interface PillarCardProps {
 
 export function PillarCard({ title, points, link }: PillarCardProps) {
   return (
-    <Card className="relative overflow-hidden group">
-      <div className="absolute top-0 right-0 w-24 h-24 bg-gradient-to-br from-blue-soft/10 to-blue-periwinkle/10 rounded-full blur-2xl transform translate-x-8 -translate-y-8 group-hover:scale-150 transition-transform duration-500" />
-      <div className="relative">
-        <h3 className="text-xl font-semibold text-navy mb-4">{title}</h3>
-        <ul className="space-y-2 mb-4">
-          {points.map((point, index) => (
-            <li key={index} className="text-sm text-gray-700 leading-relaxed">
-              {point}
-            </li>
-          ))}
-        </ul>
-        <a href={link} className="inline-flex items-center text-sm font-medium text-navy hover:text-blue-soft transition-colors">
-          Learn more <ArrowRight size={16} className="ml-1" />
-        </a>
-      </div>
+    <Card className="h-full flex flex-col">
+      <h3 className="font-serif text-2xl font-medium text-stratri-dark mb-6">{title}</h3>
+      <ul className="space-y-3 mb-6 flex-grow">
+        {points.map((point, index) => (
+          <li key={index} className="text-sm text-stratri-dark/70 leading-relaxed font-sans">
+            {point}
+          </li>
+        ))}
+      </ul>
+      <a href={link} className="inline-flex items-center text-sm font-sans font-medium text-stratri-accent hover:text-stratri-dark transition-colors">
+        Learn more <ArrowRight size={16} className="ml-2" />
+      </a>
     </Card>
   );
 }
@@ -59,21 +52,25 @@ interface InsightCardProps {
 
 export function InsightCard({ title, summary, category, date, slug }: InsightCardProps) {
   return (
-    <Card className="h-full flex flex-col">
-      <div className="mb-3">
-        <span className="inline-block px-3 py-1 text-xs font-medium bg-blue-soft/10 text-blue-soft rounded-full">
+    <Card className="h-full flex flex-col group cursor-pointer hover:shadow-sm">
+      <div className="mb-4">
+        <span className="inline-block px-3 py-1 text-xs font-sans font-medium bg-stratri-light/20 text-stratri-accent rounded-full uppercase tracking-wide">
           {category}
         </span>
       </div>
-      <h3 className="text-lg font-semibold text-navy mb-2 line-clamp-2">{title}</h3>
-      <p className="text-sm text-gray-600 leading-relaxed mb-4 flex-grow line-clamp-3">{summary}</p>
-      <div className="flex items-center justify-between pt-4 border-t border-gray-100">
-        <span className="text-xs text-gray-500">{date}</span>
+      <h3 className="font-serif text-xl font-medium text-stratri-dark mb-3 line-clamp-2 group-hover:text-stratri-accent transition-colors">
+        {title}
+      </h3>
+      <p className="text-sm text-stratri-dark/70 font-sans leading-relaxed mb-6 flex-grow line-clamp-3">
+        {summary}
+      </p>
+      <div className="flex items-center justify-between pt-4 border-t border-stratri-divider">
+        <span className="text-xs text-stratri-dark/50 font-sans">{date}</span>
         <a
           href={`/insights/${slug}`}
-          className="inline-flex items-center text-sm font-medium text-navy hover:text-blue-soft transition-colors"
+          className="inline-flex items-center text-sm font-sans font-medium text-stratri-accent hover:text-stratri-dark transition-colors"
         >
-          Read <ArrowRight size={14} className="ml-1" />
+          Read <ArrowRight size={14} className="ml-2" />
         </a>
       </div>
     </Card>

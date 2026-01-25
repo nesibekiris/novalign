@@ -4,23 +4,21 @@ export default {
   theme: {
     extend: {
       colors: {
-        navy: {
-          DEFAULT: '#021f5b',
-          light: '#0a2d73',
-          dark: '#011438',
-        },
-        light: {
-          DEFAULT: '#e9eef8',
-          bg: '#f2f5fb',
-          dark: '#d8e1f0',
-        },
-        blue: {
-          soft: '#80b1d2',
-          periwinkle: '#87a6dd',
-        },
+        'stratri-cream': '#FEFBF8',
+        'stratri-dark': '#1E2A45',
+        'stratri-accent': '#184A5A',
+        'stratri-light': '#9FB7C8',
+        'stratri-divider': '#E8E4DF',
       },
       fontFamily: {
-        sans: ['Inter', 'system-ui', '-apple-system', 'sans-serif'],
+        serif: ['Cormorant Garamond', 'Georgia', 'serif'],
+        sans: ['IBM Plex Sans', 'system-ui', '-apple-system', 'sans-serif'],
+      },
+      spacing: {
+        '18': '4.5rem',
+        '22': '5.5rem',
+        '26': '6.5rem',
+        '30': '7.5rem',
       },
     },
   },
