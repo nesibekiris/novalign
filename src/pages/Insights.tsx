@@ -1,16 +1,13 @@
-import { useState } from 'react';
+import { useState, useEffect, useRef } from 'react';
 import { InsightCard } from '../components/Card';
 import { Newsletter } from '../components/Newsletter';
 
 const categories = [
   'All',
-  'AI Strategy & Maturity',
-  'AI Governance',
-  'AI Ethics',
-  'AI Literacy',
-  'Market & Policy Research',
-  'Policy & Government Affairs',
-  'Reports & Publications',
+  'Reports',
+  'Techletter',
+  'Articles',
+  'AI Wrapped',
 ];
 
 const insights = [
@@ -18,107 +15,160 @@ const insights = [
     title: 'Understanding AI Governance Frameworks',
     summary:
       'A deep dive into building effective AI governance structures that balance innovation with accountability and ethical considerations.',
-    category: 'AI Governance',
+    category: 'Articles',
     date: 'January 15, 2026',
+    readingTime: '8 min read',
     slug: 'understanding-ai-governance-frameworks',
+    illustrationType: 'network',
   },
   {
     title: 'The Evolution of AI Policy in 2026',
     summary:
       'Analyzing key regulatory developments across jurisdictions and what they mean for organizations deploying AI systems.',
-    category: 'Policy & Government Affairs',
+    category: 'Articles',
     date: 'January 10, 2026',
+    readingTime: '12 min read',
     slug: 'evolution-of-ai-policy-2026',
+    illustrationType: 'circles',
   },
   {
     title: 'Building AI Literacy Across Your Organization',
     summary:
       'Why AI literacy is foundational to good governance, and practical approaches to building it across leadership and teams.',
-    category: 'AI Literacy',
+    category: 'Techletter',
     date: 'January 5, 2026',
+    readingTime: '6 min read',
     slug: 'building-ai-literacy',
+    illustrationType: 'lines',
   },
   {
     title: 'AI Maturity Assessment: A Practical Framework',
     summary:
       'How to evaluate your organization\'s AI capabilities and readiness, with a step-by-step diagnostic approach.',
-    category: 'AI Strategy & Maturity',
+    category: 'Reports',
     date: 'December 20, 2025',
+    readingTime: '15 min read',
     slug: 'ai-maturity-assessment-framework',
+    illustrationType: 'grid',
+  },
+  {
+    title: 'AI Wrapped 2025: The Year in Review',
+    summary:
+      'A comprehensive look back at the most significant developments, trends, and shifts in AI governance and policy throughout 2025.',
+    category: 'AI Wrapped',
+    date: 'December 18, 2025',
+    readingTime: '10 min read',
+    slug: 'ai-wrapped-2025',
+    illustrationType: 'waves',
   },
   {
     title: 'Ethics by Design: Embedding Values in AI Systems',
     summary:
       'Moving beyond principles to practice – how to operationalize ethical considerations throughout the AI lifecycle.',
-    category: 'AI Ethics',
+    category: 'Articles',
     date: 'December 15, 2025',
+    readingTime: '9 min read',
     slug: 'ethics-by-design',
+    illustrationType: 'dots',
   },
   {
     title: 'Market Trends Report: AI Adoption in Financial Services',
     summary:
       'An analysis of how financial institutions are deploying AI, the use cases gaining traction, and regulatory considerations.',
-    category: 'Market & Policy Research',
+    category: 'Reports',
     date: 'December 10, 2025',
+    readingTime: '18 min read',
     slug: 'ai-adoption-financial-services',
+    illustrationType: 'network',
   },
   {
     title: 'Navigating the EU AI Act: A Practical Guide',
     summary:
       'Understanding the requirements, compliance timelines, and strategic implications of Europe\'s landmark AI regulation.',
-    category: 'Policy & Government Affairs',
+    category: 'Techletter',
     date: 'December 5, 2025',
+    readingTime: '7 min read',
     slug: 'navigating-eu-ai-act',
+    illustrationType: 'circles',
   },
   {
     title: 'Annual Report: The State of AI Governance 2025',
     summary:
       'Our comprehensive annual review of AI governance trends, challenges, and emerging best practices across sectors.',
-    category: 'Reports & Publications',
+    category: 'Reports',
     date: 'December 1, 2025',
+    readingTime: '22 min read',
     slug: 'state-of-ai-governance-2025',
+    illustrationType: 'lines',
   },
   {
     title: 'The Role of the Board in AI Oversight',
     summary:
       'Why boards need AI literacy, what questions they should ask, and how to structure effective AI governance at the board level.',
-    category: 'AI Governance',
+    category: 'Articles',
     date: 'November 25, 2025',
+    readingTime: '11 min read',
     slug: 'board-role-ai-oversight',
+    illustrationType: 'grid',
   },
 ];
 
 export function Insights() {
   const [selectedCategory, setSelectedCategory] = useState('All');
+  const [visibleCards, setVisibleCards] = useState<Set<number>>(new Set());
+  const cardRefs = useRef<(HTMLDivElement | null)[]>([]);
 
   const filteredInsights =
     selectedCategory === 'All'
       ? insights
       : insights.filter((insight) => insight.category === selectedCategory);
 
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            const index = Number(entry.target.getAttribute('data-index'));
+            setVisibleCards((prev) => new Set([...prev, index]));
+          }
+        });
+      },
+      {
+        threshold: 0.1,
+        rootMargin: '0px 0px -50px 0px',
+      }
+    );
+
+    cardRefs.current.forEach((ref) => {
+      if (ref) observer.observe(ref);
+    });
+
+    return () => observer.disconnect();
+  }, [filteredInsights]);
+
   return (
-    <div className="min-h-screen bg-light">
-      <section className="bg-navy text-white py-20">
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h1 className="text-4xl sm:text-5xl font-semibold mb-6">Insights & Research</h1>
-          <p className="text-xl text-gray-300 leading-relaxed">
-            Deep thinking on AI governance, strategy, ethics, literacy and policy. Research-led perspectives on the
+    <div className="min-h-screen bg-stratri-cream">
+      <section className="bg-stratri-dark text-white py-20">
+        <div className="max-w-4xl mx-auto px-6 lg:px-8 text-center">
+          <h1 className="font-serif text-4xl sm:text-5xl font-medium mb-6 tracking-wide">Insights</h1>
+          <p className="font-sans text-xl text-stratri-cream/80 leading-relaxed">
+            Deep thinking on AI governance, strategy, ethics, and policy. Research-led perspectives on the
             challenges and opportunities of aligning AI with organizational and public values.
           </p>
         </div>
       </section>
 
-      <section className="py-12 bg-light-bg sticky top-16 z-40 border-b border-light-dark">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="flex flex-wrap gap-2 justify-center">
+      <section className="py-10 bg-stratri-cream sticky top-0 z-40 border-b border-stratri-divider/30">
+        <div className="max-w-7xl mx-auto px-6 lg:px-8">
+          <div className="flex flex-wrap gap-3 justify-center">
             {categories.map((category) => (
               <button
                 key={category}
                 onClick={() => setSelectedCategory(category)}
-                className={`px-4 py-2 rounded-full text-sm font-medium transition-colors ${
+                className={`px-5 py-2 rounded-full font-sans text-sm font-medium transition-all duration-200 ${
                   selectedCategory === category
-                    ? 'bg-navy text-white'
-                    : 'bg-white text-navy hover:bg-light-dark'
+                    ? 'bg-stratri-accent text-stratri-cream shadow-sm'
+                    : 'border border-stratri-dark text-stratri-dark hover:border-stratri-accent hover:text-stratri-accent'
                 }`}
               >
                 {category}
@@ -129,23 +179,29 @@ export function Insights() {
       </section>
 
       <section className="py-20">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="mb-8">
-            <p className="text-gray-700">
-              Showing <span className="font-semibold">{filteredInsights.length}</span>{' '}
-              {selectedCategory === 'All' ? 'insights' : `insights in "${selectedCategory}"`}
-            </p>
-          </div>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        <div className="max-w-7xl mx-auto px-6 lg:px-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {filteredInsights.map((insight, index) => (
-              <InsightCard key={index} {...insight} />
+              <div
+                key={index}
+                ref={(el) => (cardRefs.current[index] = el)}
+                data-index={index}
+                className={`transition-all duration-700 ${
+                  visibleCards.has(index)
+                    ? 'opacity-100 translate-y-0'
+                    : 'opacity-0 translate-y-8'
+                }`}
+                style={{ transitionDelay: `${(index % 3) * 100}ms` }}
+              >
+                <InsightCard {...insight} />
+              </div>
             ))}
           </div>
         </div>
       </section>
 
-      <section className="py-20 bg-light-bg">
-        <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
+      <section className="py-20 bg-white border-t border-stratri-divider/30">
+        <div className="max-w-3xl mx-auto px-6 lg:px-8">
           <Newsletter />
         </div>
       </section>

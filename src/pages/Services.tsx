@@ -66,11 +66,11 @@ export function Services() {
   ];
 
   return (
-    <div className="min-h-screen bg-light">
-      <section className="bg-navy text-white py-20">
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h1 className="text-4xl sm:text-5xl font-semibold mb-6">Services</h1>
-          <p className="text-xl text-gray-300 leading-relaxed">
+    <div className="min-h-screen bg-stratri-cream">
+      <section className="bg-stratri-dark text-white py-20">
+        <div className="max-w-4xl mx-auto px-6 lg:px-8 text-center">
+          <h1 className="font-serif text-4xl sm:text-5xl font-medium mb-6 tracking-wide">Services</h1>
+          <p className="font-sans text-xl text-stratri-cream/80 leading-relaxed">
             Stratri works at the intersection of technology, society and policy – helping organizations turn AI governance and responsible technology into strategic advantage.
           </p>
         </div>
@@ -78,26 +78,25 @@ export function Services() {
 
       <section className="relative py-20 overflow-hidden">
         <DotPattern />
-        <div className="relative max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="relative max-w-5xl mx-auto px-6 lg:px-8">
           <div className="space-y-20">
             {services.map((service, index) => (
               <div key={service.id} id={service.id} className="scroll-mt-20">
-                <div className="bg-white rounded-lg p-8 lg:p-12 shadow-sm hover:shadow-lg transition-shadow">
+                <div className="bg-white border border-stratri-divider/50 rounded-sm p-8 lg:p-12 hover:border-stratri-accent/50 transition-all duration-200">
                   <div className="flex items-center gap-4 mb-6">
-                    <div className="relative w-12 h-12 bg-gradient-to-br from-navy to-navy-light rounded-full flex items-center justify-center text-white text-xl font-semibold flex-shrink-0 shadow-md">
-                      <div className="absolute inset-0 rounded-full bg-blue-soft/20 blur-lg" />
-                      <span className="relative">{index + 1}</span>
+                    <div className="flex-shrink-0 w-12 h-12 bg-stratri-dark rounded-sm flex items-center justify-center">
+                      <span className="font-serif text-xl font-medium text-white">{index + 1}</span>
                     </div>
-                    <h2 className="text-3xl font-semibold text-navy">{service.title}</h2>
+                    <h2 className="font-serif text-3xl font-medium text-stratri-dark">{service.title}</h2>
                   </div>
-                  <p className="text-lg text-gray-700 mb-8 leading-relaxed">{service.intro}</p>
-                  <div className="bg-light rounded-lg p-6">
-                    <h3 className="text-sm font-semibold text-navy uppercase tracking-wide mb-4">What we offer</h3>
+                  <p className="font-sans text-lg text-stratri-dark/80 mb-8 leading-relaxed">{service.intro}</p>
+                  <div className="bg-stratri-cream/50 border border-stratri-divider/30 rounded-sm p-6">
+                    <h3 className="font-sans text-sm font-semibold text-stratri-dark uppercase tracking-wide mb-4">What we offer</h3>
                     <ul className="space-y-3">
                       {service.items.map((item, itemIndex) => (
                         <li key={itemIndex} className="flex items-start">
-                          <span className="text-blue-soft mr-3 flex-shrink-0">•</span>
-                          <span className="text-gray-800 leading-relaxed">{item}</span>
+                          <span className="text-stratri-accent mr-3 flex-shrink-0">•</span>
+                          <span className="font-sans text-stratri-dark/80 leading-relaxed">{item}</span>
                         </li>
                       ))}
                     </ul>
@@ -107,31 +106,89 @@ export function Services() {
             ))}
           </div>
 
-          <div className="mt-20">
-            <div className="bg-gradient-to-br from-navy to-navy-light text-white rounded-lg p-8 lg:p-12 shadow-lg">
-              <div className="max-w-3xl mx-auto text-center">
-                <h2 className="text-3xl font-semibold mb-4">Railway – AI Governance & Maturity Framework</h2>
-                <p className="text-xl text-gray-200 mb-6 leading-relaxed">
-                  Railway is Stratri's framework for assessing AI maturity and designing governance at the intersection of Technology, Society and Policy.
-                </p>
-                <p className="text-gray-300 mb-8 leading-relaxed">
-                  It provides a comprehensive approach to understanding where organizations are in their AI journey and building the governance structures, processes, and capabilities they need to move with confidence.
-                </p>
-                <Button href="/railway" className="bg-white text-navy hover:bg-light">
-                  Explore Railway framework
-                </Button>
+          <div className="mt-20" id="railway">
+            <div className="bg-stratri-cream border border-stratri-divider/50 rounded-sm p-8 lg:p-12">
+              <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+                <div>
+                  <div className="inline-block px-4 py-1 bg-stratri-accent/10 border border-stratri-accent/30 rounded-full mb-6">
+                    <span className="font-sans text-xs font-medium text-stratri-accent uppercase tracking-wider">Framework</span>
+                  </div>
+                  <h2 className="font-serif text-4xl font-medium text-stratri-dark mb-4">Railway</h2>
+                  <p className="font-serif text-lg italic text-stratri-dark/70 mb-6">
+                    AI Governance & Maturity Framework
+                  </p>
+                  <p className="font-sans text-stratri-dark/80 leading-relaxed mb-6">
+                    Railway treats governance as the rail infrastructure that lets organizations move with confidence at the intersection of technology, society and policy. Just as a railway provides structure, direction, and safety for movement, AI governance provides the foundation for organizations to deploy technology responsibly and strategically.
+                  </p>
+                  <p className="font-sans text-stratri-dark/80 leading-relaxed mb-8">
+                    At the heart of Railway is <span className="font-semibold text-stratri-dark">RAIL</span> – a comprehensive approach covering Risk & Responsibility, Alignment, Insight & Literacy, and Lifecycles & Regulation.
+                  </p>
+                  <Button href="/railway" variant="primary">
+                    Explore Railway framework
+                  </Button>
+                </div>
+
+                <div className="space-y-4">
+                  <div className="flex items-start gap-4 p-5 bg-white border border-stratri-divider/50 rounded-sm hover:border-stratri-accent/50 transition-all duration-200">
+                    <div className="flex-shrink-0 w-12 h-12 bg-stratri-dark rounded-sm flex items-center justify-center">
+                      <span className="font-serif text-2xl font-medium text-white">R</span>
+                    </div>
+                    <div>
+                      <h3 className="font-sans text-sm font-semibold text-stratri-dark mb-1 uppercase tracking-wide">Risk & Responsibility</h3>
+                      <p className="font-sans text-xs text-stratri-dark/70 leading-relaxed">
+                        Identifying, assessing and managing risks across the AI lifecycle with clear accountability.
+                      </p>
+                    </div>
+                  </div>
+
+                  <div className="flex items-start gap-4 p-5 bg-white border border-stratri-divider/50 rounded-sm hover:border-stratri-accent/50 transition-all duration-200">
+                    <div className="flex-shrink-0 w-12 h-12 bg-stratri-dark rounded-sm flex items-center justify-center">
+                      <span className="font-serif text-2xl font-medium text-white">A</span>
+                    </div>
+                    <div>
+                      <h3 className="font-sans text-sm font-semibold text-stratri-dark mb-1 uppercase tracking-wide">Alignment</h3>
+                      <p className="font-sans text-xs text-stratri-dark/70 leading-relaxed">
+                        Ensuring AI systems align with organizational values, strategic objectives, and societal interests.
+                      </p>
+                    </div>
+                  </div>
+
+                  <div className="flex items-start gap-4 p-5 bg-white border border-stratri-divider/50 rounded-sm hover:border-stratri-accent/50 transition-all duration-200">
+                    <div className="flex-shrink-0 w-12 h-12 bg-stratri-dark rounded-sm flex items-center justify-center">
+                      <span className="font-serif text-2xl font-medium text-white">I</span>
+                    </div>
+                    <div>
+                      <h3 className="font-sans text-sm font-semibold text-stratri-dark mb-1 uppercase tracking-wide">Insight & Literacy</h3>
+                      <p className="font-sans text-xs text-stratri-dark/70 leading-relaxed">
+                        Developing AI literacy across leadership and teams to make informed decisions.
+                      </p>
+                    </div>
+                  </div>
+
+                  <div className="flex items-start gap-4 p-5 bg-white border border-stratri-divider/50 rounded-sm hover:border-stratri-accent/50 transition-all duration-200">
+                    <div className="flex-shrink-0 w-12 h-12 bg-stratri-dark rounded-sm flex items-center justify-center">
+                      <span className="font-serif text-2xl font-medium text-white">L</span>
+                    </div>
+                    <div>
+                      <h3 className="font-sans text-sm font-semibold text-stratri-dark mb-1 uppercase tracking-wide">Lifecycles & Regulation</h3>
+                      <p className="font-sans text-xs text-stratri-dark/70 leading-relaxed">
+                        Managing AI across its full lifecycle while navigating the evolving regulatory landscape.
+                      </p>
+                    </div>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
 
-          <div className="mt-20 text-center bg-light-bg rounded-lg p-12">
-            <h2 className="text-2xl sm:text-3xl font-semibold text-navy mb-4">
+          <div className="mt-20 text-center bg-white border border-stratri-divider/50 rounded-sm p-12">
+            <h2 className="font-serif text-2xl sm:text-3xl font-medium text-stratri-dark mb-4">
               Ready to work together?
             </h2>
-            <p className="text-lg text-gray-700 mb-8 max-w-2xl mx-auto">
+            <p className="font-sans text-lg text-stratri-dark/80 mb-8 max-w-2xl mx-auto leading-relaxed">
               Let's discuss how Stratri can help your organization navigate the intersection of technology, society and policy.
             </p>
-            <Button href="/connect">Get in touch</Button>
+            <Button href="/connect" variant="primary">Get in touch</Button>
           </div>
         </div>
       </section>
