@@ -8,6 +8,7 @@ import { Insights } from './pages/Insights';
 import { About } from './pages/About';
 import { Connect } from './pages/Connect';
 import { Admin } from './pages/Admin';
+import { AdminCMS } from './pages/AdminCMS';
 
 function App() {
   return (
@@ -23,6 +24,7 @@ function App() {
             <Route path="/about" element={<About />} />
             <Route path="/connect" element={<Connect />} />
             <Route path="/admin" element={<Admin />} />
+            <Route path="/admin/cms" element={<AdminCMS />} />
           </Routes>
         </main>
         <Footer />

@@ -3,6 +3,7 @@ import { PillarCard, InsightCard } from '../components/Card';
 import { Newsletter } from '../components/Newsletter';
 import { GridPattern, GeometricShapes, DotPattern, CirclePattern } from '../components/Visuals';
 import { HeroIllustration, AlignmentNodes } from '../components/ThreeDVisuals';
+import { TechnologyIcon, PolicyIcon, SocietyIcon, StrategyIcon, GovernanceIcon, ResearchIcon, PolicyAffairsIcon } from '../components/Icons';
 import { ArrowDown, Linkedin, BookOpen } from 'lucide-react';
 
 export function Home() {
@@ -17,6 +18,7 @@ export function Home() {
     {
       title: 'AI Strategy & Maturity',
       subtitle: 'From scattered pilots to a shared route.',
+      icon: <StrategyIcon className="w-full h-full" />,
       points: [
         'Technology and AI maturity assessments and diagnostics',
         'Roadmaps aligned with business, societal, and public value',
@@ -27,6 +29,7 @@ export function Home() {
     {
       title: 'AI Governance, Ethics & Literacy',
       subtitle: 'Turning principles into everyday decisions.',
+      icon: <GovernanceIcon className="w-full h-full" />,
       points: [
         'Governance frameworks, principles, and processes for technology and AI',
         'Ethical guidelines and review mechanisms across the full lifecycle',
@@ -37,6 +40,7 @@ export function Home() {
     {
       title: 'Market & Policy Research',
       subtitle: 'Making sense of shifting markets and rules.',
+      icon: <ResearchIcon className="w-full h-full" />,
       points: [
         'Research on technology and AI markets, trends, and use cases',
         'Analysis of technology and AI policy and regulatory landscapes',
@@ -47,6 +51,7 @@ export function Home() {
     {
       title: 'Policy & Government Affairs',
       subtitle: 'Engaging credibly with the public arena.',
+      icon: <PolicyAffairsIcon className="w-full h-full" />,
       points: [
         'Advisory on technology and AI policy',
         'Stakeholder mapping and engagement strategies',
@@ -112,7 +117,7 @@ export function Home() {
         </div>
       </section>
 
-      <section className="py-24 bg-white">
+      <section className="py-24 bg-gradient-to-b from-white to-[#9FB7C8]/5">
         <div className="max-w-7xl mx-auto px-6 lg:px-8">
           <div className="text-center mb-16">
             <h2 className="font-serif text-4xl sm:text-5xl font-medium text-stratri-dark mb-6">Three roads. One decision point.</h2>
@@ -126,23 +131,23 @@ export function Home() {
             </div>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-5xl mx-auto mb-16">
-            <div className="text-center">
-              <div className="w-16 h-16 rounded-sm bg-stratri-dark flex items-center justify-center mx-auto mb-4">
-                <span className="font-serif text-2xl font-medium text-white">T</span>
+            <div className="text-center group">
+              <div className="w-20 h-20 mx-auto mb-6 transition-transform duration-300 group-hover:scale-110 group-hover:-translate-y-1">
+                <TechnologyIcon className="w-full h-full" />
               </div>
               <h3 className="font-sans text-lg font-semibold text-stratri-dark mb-2">Technology</h3>
               <p className="font-sans text-sm text-stratri-dark/70">Systems, products, data, models</p>
             </div>
-            <div className="text-center">
-              <div className="w-16 h-16 rounded-sm bg-stratri-dark flex items-center justify-center mx-auto mb-4">
-                <span className="font-serif text-2xl font-medium text-white">P</span>
+            <div className="text-center group">
+              <div className="w-20 h-20 mx-auto mb-6 transition-transform duration-300 group-hover:scale-110 group-hover:-translate-y-1">
+                <PolicyIcon className="w-full h-full" />
               </div>
               <h3 className="font-sans text-lg font-semibold text-stratri-dark mb-2">Policy</h3>
               <p className="font-sans text-sm text-stratri-dark/70">Law, regulation, internal rules</p>
             </div>
-            <div className="text-center">
-              <div className="w-16 h-16 rounded-sm bg-stratri-dark flex items-center justify-center mx-auto mb-4">
-                <span className="font-serif text-2xl font-medium text-white">S</span>
+            <div className="text-center group">
+              <div className="w-20 h-20 mx-auto mb-6 transition-transform duration-300 group-hover:scale-110 group-hover:-translate-y-1">
+                <SocietyIcon className="w-full h-full" />
               </div>
               <h3 className="font-sans text-lg font-semibold text-stratri-dark mb-2">Society</h3>
               <p className="font-sans text-sm text-stratri-dark/70">Users, workers, citizens, public trust</p>
@@ -169,35 +174,35 @@ export function Home() {
         </div>
       </section>
 
-      <section id="how-we-work" className="relative py-24 overflow-hidden bg-white">
+      <section id="how-we-work" className="relative py-24 overflow-hidden bg-gradient-to-b from-[#9FB7C8]/5 to-white">
         <div className="relative max-w-7xl mx-auto px-6 lg:px-8">
           <div className="text-center mb-16">
             <h2 className="font-serif text-4xl sm:text-5xl font-medium text-stratri-dark mb-4">How we work at the crossroads</h2>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-12 max-w-5xl mx-auto">
             <div>
-              <div className="w-16 h-16 rounded-sm bg-stratri-dark flex items-center justify-center font-serif text-2xl font-medium text-white mb-6">
+              <div className="w-16 h-16 rounded-sm bg-[#184A5A] flex items-center justify-center font-serif text-2xl font-medium text-white mb-6">
                 1
               </div>
-              <h3 className="font-serif text-2xl font-medium text-stratri-dark mb-4">Recognize the junctions</h3>
+              <h3 className="font-serif text-2xl font-medium text-[#184A5A] mb-4">Recognize the junctions</h3>
               <p className="font-sans text-stratri-dark/70 leading-relaxed">
                 We start by surfacing where innovation actually lives in your organization. Not just in strategy decks, but in products, workflows, relationships, and quiet experiments.
               </p>
             </div>
             <div>
-              <div className="w-16 h-16 rounded-sm bg-stratri-dark flex items-center justify-center font-serif text-2xl font-medium text-white mb-6">
+              <div className="w-16 h-16 rounded-sm bg-[#184A5A] flex items-center justify-center font-serif text-2xl font-medium text-white mb-6">
                 2
               </div>
-              <h3 className="font-serif text-2xl font-medium text-stratri-dark mb-4">Design the stratum</h3>
+              <h3 className="font-serif text-2xl font-medium text-[#184A5A] mb-4">Design the stratum</h3>
               <p className="font-sans text-stratri-dark/70 leading-relaxed">
                 Together, we build the strategic ground: governance structures, roles, workflows, and narratives that connect technology, policy, and society into one coherent route instead of three competing ones.
               </p>
             </div>
             <div>
-              <div className="w-16 h-16 rounded-sm bg-stratri-dark flex items-center justify-center font-serif text-2xl font-medium text-white mb-6">
+              <div className="w-16 h-16 rounded-sm bg-[#184A5A] flex items-center justify-center font-serif text-2xl font-medium text-white mb-6">
                 3
               </div>
-              <h3 className="font-serif text-2xl font-medium text-stratri-dark mb-4">Embed and iterate</h3>
+              <h3 className="font-serif text-2xl font-medium text-[#184A5A] mb-4">Embed and iterate</h3>
               <p className="font-sans text-stratri-dark/70 leading-relaxed">
                 Governance only works if people use it. We stay close as you roll out, adjust to regulation and market pressure, and learn from real cases.
               </p>

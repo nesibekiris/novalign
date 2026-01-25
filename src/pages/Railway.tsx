@@ -4,30 +4,48 @@ import { NetworkPattern, DiagonalLines, CirclePattern } from '../components/Visu
 import { RailwayFrameworkVisual } from '../components/ThreeDVisuals';
 
 export function Railway() {
-  const railFramework = [
+  const railwayQuestions = [
     {
       letter: 'R',
-      title: 'Risk & Responsibility',
+      title: 'Recognize',
       description:
-        'Identifying, assessing and managing risks across the AI lifecycle. Establishing clear ownership, accountability structures, and decision-making processes that ensure responsible AI deployment.',
+        'What technology and AI do we actually have, and where does it live in our products, workflows, and relationships?',
     },
     {
       letter: 'A',
-      title: 'Alignment',
+      title: 'Architect',
       description:
-        'Ensuring AI systems are aligned with organizational values, strategic objectives, and societal interests. Building governance frameworks that connect technical choices to ethical principles and business outcomes.',
+        'What do we stand for, and how do we turn that into structures, committees, and decision rights?',
     },
     {
       letter: 'I',
-      title: 'Insight & Literacy',
+      title: 'Institutionalize',
       description:
-        'Developing AI literacy across leadership and teams. Creating the knowledge base and analytical capabilities needed to understand AI systems, ask the right questions, and make informed decisions.',
+        'How do we move from good intentions to routines, templates, and processes people actually use?',
     },
     {
       letter: 'L',
-      title: 'Lifecycles & Regulation',
+      title: 'Learn & Lift',
       description:
-        'Managing AI across its full lifecycle – from design through deployment to retirement. Understanding and navigating the evolving regulatory landscape, compliance requirements, and policy implications.',
+        'How do we help people across the organization understand technology and AI well enough to make good calls?',
+    },
+    {
+      letter: 'W',
+      title: 'Workflows with RAIL',
+      description:
+        'How do specific decisions flow from idea to deployment to review?',
+    },
+    {
+      letter: 'A',
+      title: 'Assess',
+      description:
+        'Are we meeting our own commitments, and what happens when we do not?',
+    },
+    {
+      letter: 'Y',
+      title: 'Yield & Adapt',
+      description:
+        'What are we learning from incidents, audits, and outcomes, and how do we feed that back into the system?',
     },
   ];
 
@@ -73,31 +91,27 @@ export function Railway() {
         <NetworkPattern />
         <div className="relative max-w-5xl mx-auto px-6 lg:px-8">
           <div className="text-center mb-12">
-            <h2 className="font-serif text-3xl sm:text-4xl font-medium text-stratri-dark mb-4">The RAIL framework</h2>
+            <h2 className="font-serif text-3xl sm:text-4xl font-medium text-stratri-dark mb-4">RAILWAY questions</h2>
             <p className="font-sans text-lg text-stratri-dark/80 max-w-3xl mx-auto">
-              Four interconnected pillars for comprehensive AI governance and maturity.
+              Railway is STRATRI's governance and maturity framework. It starts from the image of a network of tracks and junctions, not a static matrix. Each line is a part of your organization. Each junction is a decision point.
             </p>
           </div>
 
-          <div className="mb-16">
-            <RailwayFrameworkVisual />
-          </div>
-
-          <div className="space-y-6">
-            {railFramework.map((pillar, index) => (
+          <div className="space-y-4">
+            {railwayQuestions.map((question, index) => (
               <div
                 key={index}
-                className="bg-stratri-cream border border-stratri-divider/50 rounded-sm p-8
+                className="bg-stratri-cream border border-stratri-divider/50 rounded-sm p-6
                   hover:border-stratri-accent/50 hover:shadow-lg hover:-translate-y-1
                   transition-all duration-300"
               >
                 <div className="flex items-start gap-6">
-                  <div className="flex-shrink-0 w-20 h-20 bg-stratri-dark rounded-sm flex items-center justify-center">
-                    <span className="font-serif text-4xl font-medium text-white">{pillar.letter}</span>
+                  <div className="flex-shrink-0 w-16 h-16 bg-[#184A5A] rounded-sm flex items-center justify-center">
+                    <span className="font-serif text-3xl font-medium text-white">{question.letter}</span>
                   </div>
                   <div className="flex-grow">
-                    <h3 className="font-serif text-2xl font-medium text-stratri-dark mb-3">{pillar.title}</h3>
-                    <p className="font-sans text-stratri-dark/80 leading-relaxed">{pillar.description}</p>
+                    <h3 className="font-serif text-xl font-medium text-stratri-dark mb-2">{question.title}</h3>
+                    <p className="font-sans text-stratri-dark/70 leading-relaxed">{question.description}</p>
                   </div>
                 </div>
               </div>

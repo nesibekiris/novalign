@@ -23,13 +23,19 @@ export function Card({ children, className = '' }: CardProps) {
 interface PillarCardProps {
   title: string;
   subtitle?: string;
+  icon?: ReactNode;
   points: string[];
   link: string;
 }
 
-export function PillarCard({ title, subtitle, points, link }: PillarCardProps) {
+export function PillarCard({ title, subtitle, icon, points, link }: PillarCardProps) {
   return (
     <Card className="h-full flex flex-col group">
+      {icon && (
+        <div className="w-16 h-16 mb-6 transition-transform duration-300 group-hover:scale-110 group-hover:-rotate-3">
+          {icon}
+        </div>
+      )}
       <h3 className="font-serif text-2xl font-medium text-stratri-dark mb-2">{title}</h3>
       {subtitle && <p className="font-serif text-base italic text-stratri-dark/60 mb-6">{subtitle}</p>}
       <ul className="space-y-3 mb-6 flex-grow">
