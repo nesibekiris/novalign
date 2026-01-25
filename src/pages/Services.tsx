@@ -81,10 +81,10 @@ export function Services() {
         <div className="relative max-w-5xl mx-auto px-6 lg:px-8">
           <div className="space-y-20">
             {services.map((service, index) => (
-              <div key={service.id} id={service.id} className="scroll-mt-20">
-                <div className="bg-white border border-stratri-divider/50 rounded-sm p-8 lg:p-12 hover:border-stratri-accent/50 transition-all duration-200">
+              <div key={service.id} id={service.id} className="scroll-mt-20 group">
+                <div className="bg-white border border-stratri-divider/50 rounded-sm p-8 lg:p-12 shadow-[0_1px_3px_rgba(0,0,0,0.05)] hover:border-stratri-accent hover:shadow-[0_4px_12px_rgba(0,0,0,0.08)] hover:-translate-y-1 transition-all duration-300 ease-out">
                   <div className="flex items-center gap-4 mb-6">
-                    <div className="flex-shrink-0 w-12 h-12 bg-stratri-dark rounded-sm flex items-center justify-center">
+                    <div className="flex-shrink-0 w-12 h-12 bg-stratri-dark rounded-sm flex items-center justify-center transition-transform duration-300 group-hover:scale-110">
                       <span className="font-serif text-xl font-medium text-white">{index + 1}</span>
                     </div>
                     <h2 className="font-serif text-3xl font-medium text-stratri-dark">{service.title}</h2>
@@ -129,8 +129,8 @@ export function Services() {
                 </div>
 
                 <div className="space-y-4">
-                  <div className="flex items-start gap-4 p-5 bg-white border border-stratri-divider/50 rounded-sm hover:border-stratri-accent/50 transition-all duration-200">
-                    <div className="flex-shrink-0 w-12 h-12 bg-stratri-dark rounded-sm flex items-center justify-center">
+                  <div className="group/rail flex items-start gap-4 p-5 bg-white border border-stratri-divider/50 rounded-sm shadow-[0_1px_2px_rgba(0,0,0,0.04)] hover:border-stratri-accent hover:shadow-[0_3px_8px_rgba(0,0,0,0.08)] hover:-translate-y-0.5 transition-all duration-300 ease-out">
+                    <div className="flex-shrink-0 w-12 h-12 bg-stratri-dark rounded-sm flex items-center justify-center transition-transform duration-300 group-hover/rail:scale-110 group-hover/rail:rotate-3">
                       <span className="font-serif text-2xl font-medium text-white">R</span>
                     </div>
                     <div>
@@ -141,8 +141,8 @@ export function Services() {
                     </div>
                   </div>
 
-                  <div className="flex items-start gap-4 p-5 bg-white border border-stratri-divider/50 rounded-sm hover:border-stratri-accent/50 transition-all duration-200">
-                    <div className="flex-shrink-0 w-12 h-12 bg-stratri-dark rounded-sm flex items-center justify-center">
+                  <div className="group/rail flex items-start gap-4 p-5 bg-white border border-stratri-divider/50 rounded-sm shadow-[0_1px_2px_rgba(0,0,0,0.04)] hover:border-stratri-accent hover:shadow-[0_3px_8px_rgba(0,0,0,0.08)] hover:-translate-y-0.5 transition-all duration-300 ease-out">
+                    <div className="flex-shrink-0 w-12 h-12 bg-stratri-dark rounded-sm flex items-center justify-center transition-transform duration-300 group-hover/rail:scale-110 group-hover/rail:rotate-3">
                       <span className="font-serif text-2xl font-medium text-white">A</span>
                     </div>
                     <div>
@@ -153,8 +153,8 @@ export function Services() {
                     </div>
                   </div>
 
-                  <div className="flex items-start gap-4 p-5 bg-white border border-stratri-divider/50 rounded-sm hover:border-stratri-accent/50 transition-all duration-200">
-                    <div className="flex-shrink-0 w-12 h-12 bg-stratri-dark rounded-sm flex items-center justify-center">
+                  <div className="group/rail flex items-start gap-4 p-5 bg-white border border-stratri-divider/50 rounded-sm shadow-[0_1px_2px_rgba(0,0,0,0.04)] hover:border-stratri-accent hover:shadow-[0_3px_8px_rgba(0,0,0,0.08)] hover:-translate-y-0.5 transition-all duration-300 ease-out">
+                    <div className="flex-shrink-0 w-12 h-12 bg-stratri-dark rounded-sm flex items-center justify-center transition-transform duration-300 group-hover/rail:scale-110 group-hover/rail:rotate-3">
                       <span className="font-serif text-2xl font-medium text-white">I</span>
                     </div>
                     <div>
@@ -165,8 +165,8 @@ export function Services() {
                     </div>
                   </div>
 
-                  <div className="flex items-start gap-4 p-5 bg-white border border-stratri-divider/50 rounded-sm hover:border-stratri-accent/50 transition-all duration-200">
-                    <div className="flex-shrink-0 w-12 h-12 bg-stratri-dark rounded-sm flex items-center justify-center">
+                  <div className="group/rail flex items-start gap-4 p-5 bg-white border border-stratri-divider/50 rounded-sm shadow-[0_1px_2px_rgba(0,0,0,0.04)] hover:border-stratri-accent hover:shadow-[0_3px_8px_rgba(0,0,0,0.08)] hover:-translate-y-0.5 transition-all duration-300 ease-out">
+                    <div className="flex-shrink-0 w-12 h-12 bg-stratri-dark rounded-sm flex items-center justify-center transition-transform duration-300 group-hover/rail:scale-110 group-hover/rail:rotate-3">
                       <span className="font-serif text-2xl font-medium text-white">L</span>
                     </div>
                     <div>

@@ -185,10 +185,10 @@ export function Insights() {
               <button
                 key={category}
                 onClick={() => setSelectedCategory(category)}
-                className={`px-5 py-2 rounded-full font-sans text-sm font-medium transition-all duration-200 ${
+                className={`px-5 py-2.5 rounded-full font-sans text-sm font-medium transition-all duration-200 select-none ${
                   selectedCategory === category
-                    ? 'bg-stratri-accent text-stratri-cream shadow-sm'
-                    : 'border border-stratri-dark text-stratri-dark hover:border-stratri-accent hover:text-stratri-accent'
+                    ? 'bg-stratri-accent text-stratri-cream border border-[#135268] shadow-[0_2px_4px_rgba(0,0,0,0.1)] hover:-translate-y-0.5 active:translate-y-0'
+                    : 'border border-stratri-dark text-stratri-dark shadow-[0_1px_2px_rgba(0,0,0,0.05)] hover:border-stratri-accent hover:text-stratri-accent hover:-translate-y-0.5 hover:shadow-[0_2px_4px_rgba(0,0,0,0.08)] active:translate-y-0'
                 }`}
               >
                 {category}
