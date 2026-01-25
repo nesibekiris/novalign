@@ -22,14 +22,16 @@ export function Card({ children, className = '' }: CardProps) {
 
 interface PillarCardProps {
   title: string;
+  subtitle?: string;
   points: string[];
   link: string;
 }
 
-export function PillarCard({ title, points, link }: PillarCardProps) {
+export function PillarCard({ title, subtitle, points, link }: PillarCardProps) {
   return (
     <Card className="h-full flex flex-col group">
-      <h3 className="font-serif text-2xl font-medium text-stratri-dark mb-6">{title}</h3>
+      <h3 className="font-serif text-2xl font-medium text-stratri-dark mb-2">{title}</h3>
+      {subtitle && <p className="font-serif text-base italic text-stratri-dark/60 mb-6">{subtitle}</p>}
       <ul className="space-y-3 mb-6 flex-grow">
         {points.map((point, index) => (
           <li key={index} className="text-sm text-stratri-dark/70 leading-relaxed font-sans">

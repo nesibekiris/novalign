@@ -38,7 +38,7 @@ export function Railway() {
         <div className="relative max-w-4xl mx-auto px-6 lg:px-8 text-center">
           <h1 className="font-serif text-4xl sm:text-5xl font-medium mb-6 tracking-wide">Railway</h1>
           <p className="font-serif text-xl italic text-stratri-cream/80 leading-relaxed">
-            Stratri's AI Governance & Maturity Framework
+            A route through your technology and AI landscape, not another matrix.
           </p>
         </div>
       </section>
@@ -47,17 +47,23 @@ export function Railway() {
         <CirclePattern />
         <div className="relative max-w-4xl mx-auto px-6 lg:px-8">
           <div className="bg-white border border-stratri-divider/50 rounded-sm p-8 lg:p-12 mb-16">
-            <h2 className="font-serif text-3xl font-medium text-stratri-dark mb-6">The Railway metaphor</h2>
+            <h2 className="font-serif text-3xl font-medium text-stratri-dark mb-6">You do not need more boxes. You need a map.</h2>
             <div className="prose prose-lg max-w-none">
               <p className="font-sans text-stratri-dark/80 leading-relaxed mb-4">
-                Railway is Stratri's framework for AI governance and maturity. It treats governance as the rail infrastructure that lets organizations move with confidence at the intersection of technology, society and policy. Just as a railway provides structure, direction, and safety for movement, AI governance provides the foundation for organizations to deploy technology responsibly and strategically.
+                Many frameworks feel like lab reports: precise, yet difficult to navigate when you are in the middle of real work. Railway starts from a different image: a network of tracks and junctions.
               </p>
               <p className="font-sans text-stratri-dark/80 leading-relaxed mb-4">
-                Without proper rails, there's risk of derailment. Without governance and maturity, organizations face ethical failures, compliance issues, reputational damage, and missed opportunities. Railway helps organizations build the structures, processes, and capabilities they need to turn responsible technology into competitive advantage.
+                Each line is a part of your organization. Each junction is a decision point. Railway helps you decide where to lay track, where to slow down, and where to build new stations.
               </p>
-              <p className="font-sans text-stratri-dark/80 leading-relaxed">
-                At the heart of Railway is <span className="font-semibold text-stratri-dark">RAIL</span> – a comprehensive approach covering Risk & Responsibility, Alignment, Insight & Literacy, and Lifecycles & Regulation. These four pillars enable strategic governance across the technology-society-policy triad.
+              <p className="font-sans text-stratri-dark/80 leading-relaxed mb-4">
+                Policies, principles, and risk registers matter, but they rarely tell one story. Railway connects them so you can see:
               </p>
+              <ul className="space-y-2 mb-4 ml-6">
+                <li className="font-sans text-stratri-dark/80 leading-relaxed">What technology and AI you have</li>
+                <li className="font-sans text-stratri-dark/80 leading-relaxed">How it is governed</li>
+                <li className="font-sans text-stratri-dark/80 leading-relaxed">Who is accountable</li>
+                <li className="font-sans text-stratri-dark/80 leading-relaxed">How it evolves as markets and rules shift</li>
+              </ul>
             </div>
           </div>
         </div>
@@ -104,34 +110,35 @@ export function Railway() {
         <div className="max-w-5xl mx-auto px-6 lg:px-8">
           <div className="text-center mb-12">
             <h2 className="font-serif text-3xl sm:text-4xl font-medium text-stratri-dark mb-4">
-              Using Railway in practice
+              What you walk away with
             </h2>
-            <p className="font-sans text-lg text-stratri-dark/80 max-w-3xl mx-auto">
-              How we apply the Railway framework in our work with organizations.
-            </p>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
             <Card>
-              <h3 className="font-serif text-xl font-medium text-stratri-dark mb-3">Maturity Assessments</h3>
+              <h3 className="font-serif text-xl font-medium text-stratri-dark mb-3">A shared language for governance</h3>
               <p className="font-sans text-stratri-dark/80 leading-relaxed">
-                Stratri uses the RAIL framework to assess where organizations are in their AI journey – identifying strengths, gaps, and priorities across risk management, alignment, literacy, and lifecycle governance.
+                Across technology, legal, policy, and leadership, everyone speaks the same language when talking about governance challenges and trade-offs.
               </p>
             </Card>
 
             <Card>
-              <h3 className="font-serif text-xl font-medium text-stratri-dark mb-3">Governance Design</h3>
+              <h3 className="font-serif text-xl font-medium text-stratri-dark mb-3">A maturity view that is honest enough to act on</h3>
               <p className="font-sans text-stratri-dark/80 leading-relaxed">
-                Railway guides the design of governance structures, ensuring comprehensive coverage of risk, alignment, insight, and regulatory dimensions – tailored to organizational context and strategic ambition.
+                Not aspirational or punitive, but a clear picture of where you are, where the gaps lie, and what to prioritize first.
               </p>
             </Card>
 
             <Card>
-              <h3 className="font-serif text-xl font-medium text-stratri-dark mb-3">Training & Literacy</h3>
+              <h3 className="font-serif text-xl font-medium text-stratri-dark mb-3">A practical rollout roadmap</h3>
               <p className="font-sans text-stratri-dark/80 leading-relaxed">
-                Stratri structures AI literacy programs around RAIL, helping teams understand how to govern technology, align it with values, and navigate the full AI lifecycle across technology, society and policy.
+                Over 18 months and beyond, not a one-off report. A route that evolves as your organization and the landscape around it change.
               </p>
             </Card>
+          </div>
+
+          <div className="text-center mt-12">
+            <Button href="/connect" variant="outline">Request the Railway guide</Button>
           </div>
         </div>
       </section>

@@ -171,9 +171,11 @@ export function Insights() {
       <section className="bg-stratri-dark text-white py-20">
         <div className="max-w-4xl mx-auto px-6 lg:px-8 text-center">
           <h1 className="font-serif text-4xl sm:text-5xl font-medium mb-6 tracking-wide">Insights</h1>
-          <p className="font-sans text-xl text-stratri-cream/80 leading-relaxed">
-            Deep thinking on AI governance, strategy, ethics, and policy. Research-led perspectives on the
-            challenges and opportunities of aligning AI with organizational and public values.
+          <p className="font-serif text-xl italic text-stratri-cream/80 leading-relaxed mb-4">
+            Notes from the junction.
+          </p>
+          <p className="font-sans text-lg text-stratri-cream/70 leading-relaxed">
+            STRATRI's work does not end with client projects. We map the wider technology and AI landscape and the rules that shape it, from regulatory drafts to boardroom narratives. Insights brings this together in one place: reports, explainers, "AI wrapped" briefs, published articles, and Techletter.
           </p>
         </div>
       </section>
