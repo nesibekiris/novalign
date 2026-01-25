@@ -208,8 +208,8 @@ export function Home() {
                 </p>
               </div>
               <div className="pt-4">
-                <Button href="/techletter" className="bg-white text-stratri-dark hover:bg-stratri-cream">
-                  Visit Techletter
+                <Button href="/insights" className="bg-white text-stratri-dark hover:bg-stratri-cream">
+                  Read Techletter
                 </Button>
               </div>
             </div>

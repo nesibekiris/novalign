@@ -72,6 +72,16 @@ const insights = [
     illustrationType: 'dots',
   },
   {
+    title: 'AI Governance in Financial Services: Lessons from Early Adopters',
+    summary:
+      'How banks and fintech companies are building governance structures that balance innovation with regulatory compliance and risk management.',
+    category: 'Techletter',
+    date: 'December 12, 2025',
+    readingTime: '7 min read',
+    slug: 'ai-governance-financial-services',
+    illustrationType: 'network',
+  },
+  {
     title: 'Market Trends Report: AI Adoption in Financial Services',
     summary:
       'An analysis of how financial institutions are deploying AI, the use cases gaining traction, and regulatory considerations.',
@@ -79,16 +89,16 @@ const insights = [
     date: 'December 10, 2025',
     readingTime: '18 min read',
     slug: 'ai-adoption-financial-services',
-    illustrationType: 'network',
+    illustrationType: 'grid',
   },
   {
-    title: 'Navigating the EU AI Act: A Practical Guide',
+    title: 'The EU AI Act Enters Force: What Organizations Need to Know',
     summary:
-      'Understanding the requirements, compliance timelines, and strategic implications of Europe\'s landmark AI regulation.',
+      'Breaking down the implementation timeline, compliance requirements, and strategic implications of Europe\'s landmark AI regulation.',
     category: 'Techletter',
     date: 'December 5, 2025',
-    readingTime: '7 min read',
-    slug: 'navigating-eu-ai-act',
+    readingTime: '8 min read',
+    slug: 'eu-ai-act-organizations',
     illustrationType: 'circles',
   },
   {
@@ -109,7 +119,17 @@ const insights = [
     date: 'November 25, 2025',
     readingTime: '11 min read',
     slug: 'board-role-ai-oversight',
-    illustrationType: 'grid',
+    illustrationType: 'dots',
+  },
+  {
+    title: 'Building AI Literacy: A Practical Roadmap for Leadership Teams',
+    summary:
+      'A step-by-step approach to building AI understanding across your organization, from executives to frontline teams.',
+    category: 'Techletter',
+    date: 'November 18, 2025',
+    readingTime: '6 min read',
+    slug: 'building-ai-literacy-roadmap',
+    illustrationType: 'waves',
   },
 ];
 

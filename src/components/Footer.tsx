@@ -76,7 +76,7 @@ export function Footer() {
               </h4>
               <div className="space-y-3">
                 <Link
-                  to="/railway"
+                  to="/services/railway"
                   className="block text-sm font-sans text-stratri-dark hover:text-stratri-accent transition-colors duration-200 group"
                 >
                   <span className="inline-block group-hover:translate-x-1 transition-transform duration-200">
@@ -84,7 +84,7 @@ export function Footer() {
                   </span>
                 </Link>
                 <Link
-                  to="/railway#rail"
+                  to="/services/railway#rail"
                   className="block text-sm font-sans text-stratri-dark hover:text-stratri-accent transition-colors duration-200 group"
                 >
                   <span className="inline-block group-hover:translate-x-1 transition-transform duration-200">
@@ -108,7 +108,7 @@ export function Footer() {
                   </span>
                 </Link>
                 <Link
-                  to="/techletter"
+                  to="/insights"
                   className="block text-sm font-sans text-stratri-dark hover:text-stratri-accent transition-colors duration-200 group"
                 >
                   <span className="inline-block group-hover:translate-x-1 transition-transform duration-200">
@@ -116,7 +116,7 @@ export function Footer() {
                   </span>
                 </Link>
                 <Link
-                  to="/insights#reports"
+                  to="/insights"
                   className="block text-sm font-sans text-stratri-dark hover:text-stratri-accent transition-colors duration-200 group"
                 >
                   <span className="inline-block group-hover:translate-x-1 transition-transform duration-200">
@@ -124,7 +124,7 @@ export function Footer() {
                   </span>
                 </Link>
                 <Link
-                  to="/insights#articles"
+                  to="/insights"
                   className="block text-sm font-sans text-stratri-dark hover:text-stratri-accent transition-colors duration-200 group"
                 >
                   <span className="inline-block group-hover:translate-x-1 transition-transform duration-200">

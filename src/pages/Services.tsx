@@ -123,7 +123,7 @@ export function Services() {
                   <p className="font-sans text-stratri-dark/80 leading-relaxed mb-8">
                     At the heart of Railway is <span className="font-semibold text-stratri-dark">RAIL</span> – a comprehensive approach covering Risk & Responsibility, Alignment, Insight & Literacy, and Lifecycles & Regulation.
                   </p>
-                  <Button href="/railway" variant="primary">
+                  <Button href="/services/railway" variant="primary">
                     Explore Railway framework
                   </Button>
                 </div>

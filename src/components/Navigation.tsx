@@ -9,8 +9,6 @@ export function Navigation() {
   const navLinks = [
     { name: 'Home', path: '/' },
     { name: 'Services', path: '/services' },
-    { name: 'Railway', path: '/railway' },
-    { name: 'Techletter', path: '/techletter' },
     { name: 'Insights', path: '/insights' },
     { name: 'About', path: '/about' },
     { name: 'Connect', path: '/connect' },
