@@ -8,6 +8,7 @@ import { Techletter } from './pages/Techletter';
 import { Insights } from './pages/Insights';
 import { About } from './pages/About';
 import { Connect } from './pages/Connect';
+import { Admin } from './pages/Admin';
 
 function App() {
   return (
@@ -23,6 +24,7 @@ function App() {
             <Route path="/insights" element={<Insights />} />
             <Route path="/about" element={<About />} />
             <Route path="/connect" element={<Connect />} />
+            <Route path="/admin" element={<Admin />} />
           </Routes>
         </main>
         <Footer />
