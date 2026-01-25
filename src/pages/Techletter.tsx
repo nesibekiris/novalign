@@ -1,12 +1,30 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { Button } from '../components/Button';
 import { Card } from '../components/Card';
 import { GridPattern, GeometricShapes } from '../components/Visuals';
-import { ExternalLink } from 'lucide-react';
+import { ExternalLink, Calendar, Clock } from 'lucide-react';
+import { getTechletterIssues } from '../lib/cms';
+import type { TechletterIssue } from '../lib/supabase';
 
 export function Techletter() {
   const [email, setEmail] = useState('');
   const [status, setStatus] = useState<'idle' | 'success' | 'error'>('idle');
+  const [issues, setIssues] = useState<TechletterIssue[]>([]);
+  const [loading, setLoading] = useState(true);
+
+  useEffect(() => {
+    async function loadIssues() {
+      try {
+        const data = await getTechletterIssues(6);
+        setIssues(data);
+      } catch (error) {
+        console.error('Error loading Techletter issues:', error);
+      } finally {
+        setLoading(false);
+      }
+    }
+    loadIssues();
+  }, []);
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
@@ -17,26 +35,10 @@ export function Techletter() {
     }
   };
 
-  const recentIssues = [
-    {
-      title: 'The EU AI Act enters force: What organizations need to know',
-      summary:
-        'Breaking down the implementation timeline, compliance requirements, and strategic implications of Europe\'s landmark AI regulation.',
-      date: 'January 2026',
-    },
-    {
-      title: 'AI governance in financial services: Lessons from early adopters',
-      summary:
-        'How banks and fintech companies are building governance structures that balance innovation with regulatory compliance and risk management.',
-      date: 'December 2025',
-    },
-    {
-      title: 'Building AI literacy: A practical roadmap for leadership teams',
-      summary:
-        'Why AI literacy is the foundation of good governance, and a step-by-step approach to building understanding across your organization.',
-      date: 'November 2025',
-    },
-  ];
+  const formatDate = (dateString: string) => {
+    const date = new Date(dateString);
+    return date.toLocaleDateString('en-US', { month: 'long', year: 'numeric' });
+  };
 
   const topics = [
     {
@@ -139,44 +141,91 @@ export function Techletter() {
         </div>
       </section>
 
-      <section className="py-20">
-        <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+      <section className="py-20 bg-light">
+        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
-            <h2 className="text-3xl sm:text-4xl font-semibold text-navy mb-4">Recent issues</h2>
-            <p className="text-lg text-gray-700">A selection of recent Techletter editions</p>
+            <h2 className="text-3xl sm:text-4xl font-semibold text-navy mb-4">Latest from Techletter</h2>
+            <p className="text-lg text-gray-700">Recent deep dives on governance, technology policy, and literacy</p>
           </div>
 
-          <div className="space-y-6">
-            {recentIssues.map((issue, index) => (
-              <div key={index} className="bg-white rounded-lg p-8 shadow-sm hover:shadow-md transition-shadow">
-                <div className="flex flex-col sm:flex-row sm:items-start sm:justify-between gap-4">
-                  <div className="flex-grow">
-                    <h3 className="text-xl font-semibold text-navy mb-2">{issue.title}</h3>
-                    <p className="text-gray-700 leading-relaxed mb-3">{issue.summary}</p>
-                    <span className="inline-block text-sm text-gray-500">{issue.date}</span>
-                  </div>
-                  <a
-                    href="https://techletter.co"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="flex-shrink-0 inline-flex items-center gap-2 text-sm font-medium text-navy hover:text-blue-soft transition-colors"
+          {loading ? (
+            <div className="text-center py-12">
+              <p className="text-gray-500">Loading issues...</p>
+            </div>
+          ) : issues.length === 0 ? (
+            <div className="text-center py-12">
+              <p className="text-gray-700 mb-6">No issues published yet. Check back soon!</p>
+              <Button
+                href="https://techletter.co"
+                onClick={() => window.open('https://techletter.co', '_blank')}
+              >
+                Visit Techletter
+              </Button>
+            </div>
+          ) : (
+            <>
+              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                {issues.map((issue) => (
+                  <article
+                    key={issue.id}
+                    className="bg-light-bg rounded-lg border border-blue-soft/20 overflow-hidden hover:shadow-lg transition-all duration-300 hover:-translate-y-1 flex flex-col"
                   >
-                    Read
-                    <ExternalLink size={14} />
-                  </a>
-                </div>
-              </div>
-            ))}
-          </div>
+                    {issue.cover_image && (
+                      <div className="aspect-[16/9] overflow-hidden bg-gradient-to-br from-blue-soft/10 to-navy/5">
+                        <img
+                          src={issue.cover_image}
+                          alt={issue.title}
+                          className="w-full h-full object-cover"
+                        />
+                      </div>
+                    )}
 
-          <div className="text-center mt-12">
-            <Button
-              href="https://techletter.co"
-              onClick={() => window.open('https://techletter.co', '_blank')}
-            >
-              Browse all issues
-            </Button>
-          </div>
+                    <div className="p-6 flex-grow flex flex-col">
+                      <div className="flex items-center gap-4 text-sm text-gray-600 mb-3">
+                        <span className="inline-flex items-center gap-1">
+                          <Calendar size={14} />
+                          {formatDate(issue.published_date)}
+                        </span>
+                        {issue.reading_time && (
+                          <span className="inline-flex items-center gap-1">
+                            <Clock size={14} />
+                            {issue.reading_time}
+                          </span>
+                        )}
+                      </div>
+
+                      <h3 className="text-xl font-semibold text-navy mb-3 leading-tight font-serif">
+                        {issue.title}
+                      </h3>
+
+                      <p className="text-gray-700 leading-relaxed mb-4 flex-grow">
+                        {issue.excerpt}
+                      </p>
+
+                      <a
+                        href={issue.external_url}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="inline-flex items-center gap-2 px-4 py-2 bg-navy text-white font-medium rounded-sm hover:bg-navy-light transition-colors w-full justify-center"
+                      >
+                        Read on Techletter
+                        <ExternalLink size={16} />
+                      </a>
+                    </div>
+                  </article>
+                ))}
+              </div>
+
+              <div className="text-center mt-12">
+                <Button
+                  href="https://techletter.co"
+                  onClick={() => window.open('https://techletter.co', '_blank')}
+                >
+                  Browse all issues on Substack
+                </Button>
+              </div>
+            </>
+          )}
         </div>
       </section>
     </div>

@@ -55,3 +55,18 @@ export interface Service {
   created_at: string;
   updated_at: string;
 }
+
+export interface TechletterIssue {
+  id: string;
+  title: string;
+  slug: string;
+  external_url: string;
+  excerpt: string;
+  published_date: string;
+  reading_time: string;
+  cover_image: string;
+  status: 'draft' | 'published';
+  rss_guid: string;
+  created_at: string;
+  updated_at: string;
+}

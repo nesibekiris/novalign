@@ -1,4 +1,4 @@
-import { supabase, Page, Post, Setting, Service } from './supabase';
+import { supabase, Page, Post, Setting, Service, TechletterIssue } from './supabase';
 
 export async function getPage(slug: string): Promise<Page | null> {
   const { data, error } = await supabase
@@ -100,12 +100,50 @@ export async function getServices(): Promise<Service[]> {
   return data || [];
 }
 
+export async function getTechletterIssues(limit?: number): Promise<TechletterIssue[]> {
+  let query = supabase
+    .from('techletter_issues')
+    .select('*')
+    .eq('status', 'published')
+    .order('published_date', { ascending: false });
+
+  if (limit) {
+    query = query.limit(limit);
+  }
+
+  const { data, error } = await query;
+
+  if (error) {
+    console.error('Error fetching techletter issues:', error);
+    return [];
+  }
+
+  return data || [];
+}
+
+export async function getTechletterIssue(slug: string): Promise<TechletterIssue | null> {
+  const { data, error } = await supabase
+    .from('techletter_issues')
+    .select('*')
+    .eq('slug', slug)
+    .eq('status', 'published')
+    .maybeSingle();
+
+  if (error) {
+    console.error('Error fetching techletter issue:', error);
+    return null;
+  }
+
+  return data;
+}
+
 export async function getAllContent() {
-  const [pages, posts, settings, services] = await Promise.all([
+  const [pages, posts, settings, services, techletterIssues] = await Promise.all([
     supabase.from('pages').select('*'),
     supabase.from('posts').select('*'),
     supabase.from('settings').select('*'),
     supabase.from('services').select('*'),
+    supabase.from('techletter_issues').select('*'),
   ]);
 
   return {
@@ -113,5 +151,6 @@ export async function getAllContent() {
     posts: posts.data || [],
     settings: settings.data || [],
     services: services.data || [],
+    techletterIssues: techletterIssues.data || [],
   };
 }
