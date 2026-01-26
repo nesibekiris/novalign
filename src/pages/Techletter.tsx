@@ -8,7 +8,8 @@ import type { TechletterIssue } from '../lib/supabase';
 
 export function Techletter() {
   const [email, setEmail] = useState('');
-  const [status, setStatus] = useState<'idle' | 'success' | 'error'>('idle');
+  const [status, setStatus] = useState<'idle' | 'loading' | 'success' | 'error'>('idle');
+  const [message, setMessage] = useState('');
   const [issues, setIssues] = useState<TechletterIssue[]>([]);
   const [loading, setLoading] = useState(true);
 
@@ -26,12 +27,55 @@ export function Techletter() {
     loadIssues();
   }, []);
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    if (email) {
-      setStatus('success');
-      setEmail('');
-      setTimeout(() => setStatus('idle'), 3000);
+    if (!email) return;
+
+    setStatus('loading');
+    setMessage('');
+
+    try {
+      const supabaseUrl = import.meta.env.VITE_SUPABASE_URL;
+      const supabaseAnonKey = import.meta.env.VITE_SUPABASE_ANON_KEY;
+
+      const response = await fetch(`${supabaseUrl}/functions/v1/subscribe-newsletter`, {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+          'Authorization': `Bearer ${supabaseAnonKey}`,
+        },
+        body: JSON.stringify({
+          email,
+          source: 'techletter_page'
+        }),
+      });
+
+      const data = await response.json();
+
+      if (response.ok && data.success) {
+        setStatus('success');
+        setMessage(data.message);
+        setEmail('');
+        setTimeout(() => {
+          setStatus('idle');
+          setMessage('');
+        }, 5000);
+      } else {
+        setStatus('error');
+        setMessage(data.error || 'Failed to subscribe. Please try again.');
+        setTimeout(() => {
+          setStatus('idle');
+          setMessage('');
+        }, 5000);
+      }
+    } catch (error) {
+      console.error('Error subscribing:', error);
+      setStatus('error');
+      setMessage('An error occurred. Please try again.');
+      setTimeout(() => {
+        setStatus('idle');
+        setMessage('');
+      }, 5000);
     }
   };
 
@@ -112,17 +156,21 @@ export function Techletter() {
                 onChange={(e) => setEmail(e.target.value)}
                 placeholder="Your email address"
                 required
-                className="flex-1 px-4 py-3 border border-gray-300 rounded-sm focus:outline-none focus:ring-2 focus:ring-navy focus:border-transparent"
+                disabled={status === 'loading'}
+                className="flex-1 px-4 py-3 border border-gray-300 rounded-sm focus:outline-none focus:ring-2 focus:ring-navy focus:border-transparent disabled:opacity-50 disabled:cursor-not-allowed"
               />
               <button
                 type="submit"
-                className="px-8 py-3 bg-navy text-white font-medium rounded-sm hover:bg-navy-light transition-colors"
+                disabled={status === 'loading'}
+                className="px-8 py-3 bg-navy text-white font-medium rounded-sm hover:bg-navy-light transition-colors disabled:opacity-50 disabled:cursor-not-allowed"
               >
-                Subscribe
+                {status === 'loading' ? 'Subscribing...' : 'Subscribe'}
               </button>
             </form>
-            {status === 'success' && (
-              <p className="text-center text-sm text-green-600">Thank you for subscribing to Techletter!</p>
+            {message && (
+              <p className={`text-center text-sm ${status === 'success' ? 'text-green-600' : 'text-red-600'}`}>
+                {message}
+              </p>
             )}
 
             <div className="text-center pt-6 border-t border-gray-100">

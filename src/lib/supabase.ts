@@ -70,3 +70,14 @@ export interface TechletterIssue {
   created_at: string;
   updated_at: string;
 }
+
+export interface NewsletterSubscription {
+  id: string;
+  email: string;
+  status: 'pending' | 'active' | 'unsubscribed';
+  subscribed_at: string;
+  unsubscribed_at: string | null;
+  source: string;
+  created_at: string;
+  updated_at: string;
+}

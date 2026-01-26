@@ -11,6 +11,7 @@ Techletter is now fully integrated into STRATRI with CMS management, RSS import,
 ✅ **STRATRI Branding** - Uses your own cover images and styling, not Techletter's
 ✅ **Manual Publishing** - Review and publish each issue individually
 ✅ **No Overwrites** - Manual edits are preserved when importing RSS updates
+✅ **Newsletter Subscription** - Working subscription form that saves emails to database
 
 ## How to Use
 
@@ -87,6 +88,63 @@ Issues are displayed with STRATRI styling:
 - 1-column on mobile
 - Hover effects with shadow and subtle lift
 
+## Newsletter Subscriptions
+
+### How It Works
+
+The Techletter page includes a working subscription form that:
+
+1. Collects email addresses from visitors
+2. Validates email format
+3. Saves to `newsletter_subscriptions` database table
+4. Prevents duplicate subscriptions
+5. Allows resubscription if user previously unsubscribed
+
+### Subscriber Management
+
+Access subscriber list in the CMS at `/admin-cms`:
+
+**View Subscribers:**
+- Email address
+- Subscription status (active/unsubscribed)
+- Subscription date
+- Source (where they subscribed from)
+
+**Export Subscribers:**
+You can query the database to export subscriber emails for your newsletter platform:
+
+```sql
+SELECT email, subscribed_at
+FROM newsletter_subscriptions
+WHERE status = 'active'
+ORDER BY subscribed_at DESC;
+```
+
+### Subscription Status Flow
+
+- **active** - Currently subscribed, receives newsletters
+- **unsubscribed** - Previously subscribed but opted out
+- **pending** - Reserved for future email confirmation feature
+
+### Edge Function
+
+**Function:** `subscribe-newsletter`
+**Endpoint:** `{SUPABASE_URL}/functions/v1/subscribe-newsletter`
+
+**Security:**
+- No JWT required (public function)
+- Email validation on input
+- Duplicate checking
+- CORS enabled for public access
+
+**What It Does:**
+1. Validates email format
+2. Checks if email already exists
+3. If already active: Returns friendly message
+4. If previously unsubscribed: Reactivates subscription
+5. If new: Creates new subscription record
+6. Returns success/error message to user
+
 ## Database Structure
 
 **Table:** `techletter_issues`
@@ -106,7 +164,22 @@ Issues are displayed with STRATRI styling:
 | `created_at` | timestamptz | Record creation time |
 | `updated_at` | timestamptz | Last update time |
 
-## Edge Function
+**Table:** `newsletter_subscriptions`
+
+| Field | Type | Description |
+|-------|------|-------------|
+| `id` | uuid | Unique identifier |
+| `email` | text | Subscriber email address |
+| `status` | text | 'pending', 'active', or 'unsubscribed' |
+| `subscribed_at` | timestamptz | Subscription timestamp |
+| `unsubscribed_at` | timestamptz | When they unsubscribed (if applicable) |
+| `source` | text | Where they subscribed from |
+| `created_at` | timestamptz | Record creation time |
+| `updated_at` | timestamptz | Last update time |
+
+## Edge Functions
+
+### Import RSS Function
 
 **Function:** `import-techletter-rss`
 **Endpoint:** `{SUPABASE_URL}/functions/v1/import-techletter-rss`
@@ -182,8 +255,13 @@ Includes techletter issues in complete content fetch
 
 ### Row Level Security
 
-**Anonymous users:** Can view published issues only
-**Authenticated users:** Full CRUD access to all issues
+**Techletter Issues:**
+- **Anonymous users:** Can view published issues only
+- **Admin users:** Full CRUD access to all issues
+
+**Newsletter Subscriptions:**
+- **Anonymous users:** Can insert (subscribe) only
+- **Admin users:** Full CRUD access to all subscriptions
 
 ### API Integration
 
