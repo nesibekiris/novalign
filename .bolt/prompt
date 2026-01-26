@@ -1,5 +1,8 @@
-For all designs I ask you to make, have them be beautiful, not cookie cutter. Make webpages that are fully featured and worthy for production.
+Use my STRATRI brand system for everything. Colors: #FEFBF8, #1E2A45, #184A5A, #9FB7C8 only. Typography: Cormorant Garamond for headings, IBM Plex Sans for body and UI. Do not introduce other colors or fonts.
+Do not use lucide-react (or other icon libraries) for main brand icons. Create custom, hand‑drawn “Japanese ink” icons: thin, slightly imperfect lines, flat fills, calm editorial mood, built from simple pillar/track/node shapes, always in my color palette. Export them as clean, editable SVGs and use them throughout the site.
 
-By default, this template supports JSX syntax with Tailwind CSS classes, React hooks, and Lucide React for icons. Do not install other packages for UI themes, icons, etc unless absolutely necessary or I request them.
+Design dynamic visuals that are subtle, not flashy. In hero and key sections, add abstract SVG background shapes (pillars, tracks, nodes) with very gentle motion. Use scroll‑reveal animations so sections, cards, and illustrations softly fade in and slide up a few pixels. On hover, cards, buttons, and important icons should lift slightly, scale to about 1.02, and get a soft shadow.
 
-Use icons from lucide-react for logos.
+Buttons should feel soft and tactile with a light 3D effect: solid STRATRI color fill, medium radius, gentle shadow. On hover they move up 1–2px and deepen the shadow; on active they move down 1px and reduce the shadow, like a real press, while staying minimal and non‑glossy.
+
+Make the entire site CMS‑driven. All text, images, SVG illustrations, and icons must come from CMS fields, not be hard‑coded. I should be able to change copy, swap diagrams/icons, and update hero visuals from the CMS without touching the code.
