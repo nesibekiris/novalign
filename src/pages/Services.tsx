@@ -111,26 +111,6 @@ export function Services() {
                   </div>
                   <p className="font-serif text-lg italic text-stratri-dark/60 mb-6 ml-16">{service.subtitle}</p>
                   <p className="font-sans text-lg text-stratri-dark/80 mb-8 leading-relaxed">{service.intro}</p>
-
-                  {service.id === 'literacy' && (
-                    <div className="mb-8 grid grid-cols-2 gap-4">
-                      <div className="bg-stratri-cream/30 rounded-lg p-4 border border-stratri-divider/20">
-                        <img
-                          src="/illustrations/literacy-growth.svg"
-                          alt="Literacy Growth"
-                          className="w-full"
-                        />
-                      </div>
-                      <div className="bg-stratri-cream/30 rounded-lg p-4 border border-stratri-divider/20">
-                        <img
-                          src="/illustrations/literacy-network.svg"
-                          alt="Literacy Network"
-                          className="w-full"
-                        />
-                      </div>
-                    </div>
-                  )}
-
                   <div className="bg-stratri-cream/50 border border-stratri-divider/30 rounded-sm p-6">
                     <h3 className="font-sans text-sm font-semibold text-stratri-dark uppercase tracking-wide mb-4">What we offer</h3>
                     <ul className="space-y-3">
