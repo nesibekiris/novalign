@@ -3,6 +3,14 @@ import { Download } from 'lucide-react';
 
 const assets = [
   {
+    category: 'Railway Servisi Görselleri',
+    items: [
+      { name: 'Railway Governance', file: '/illustrations/railway-governance.svg', description: 'RAILWAY + RAIL Loop metodolojisi' },
+      { name: 'Railway Journey', file: '/illustrations/railway-journey.svg', description: 'Yolculuk ve ilerleme gösterimi' },
+      { name: 'Railway Process', file: '/illustrations/railway-process.svg', description: 'Merkezi süreç akış diyagramı' },
+    ]
+  },
+  {
     category: 'Blog İllüstrasyonları',
     items: [
       { name: 'Network', file: '/illustrations/network.svg', description: 'Bağlı düğümler ve ağ yapısı' },
@@ -88,7 +96,7 @@ export default function Downloads() {
           Medya İndirmeleri
         </h1>
         <p className="text-lg text-[#1E2A45]/70 mb-12" style={{ fontFamily: 'IBM Plex Sans, sans-serif' }}>
-          14 blog illüstrasyonu ve 3 logo - SVG veya PNG formatında
+          3 Railway görseli, 14 blog illüstrasyonu ve 3 logo - SVG veya PNG formatında
         </p>
 
         {assets.map((category, idx) => (

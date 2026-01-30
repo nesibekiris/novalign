@@ -1,0 +1,72 @@
+<svg width="800" height="600" viewBox="0 0 800 600" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="800" height="600" fill="#FEFBF8"/>
+
+  <!-- Main Railway Track -->
+  <path d="M100 300 L700 300" stroke="#1E2A45" stroke-width="3" stroke-linecap="round"/>
+  <path d="M100 320 L700 320" stroke="#1E2A45" stroke-width="3" stroke-linecap="round"/>
+
+  <!-- Railway Sleepers (ties) -->
+  <path d="M150 285 L150 335" stroke="#9FB7C8" stroke-width="2.5" stroke-linecap="round"/>
+  <path d="M220 285 L220 335" stroke="#9FB7C8" stroke-width="2.5" stroke-linecap="round"/>
+  <path d="M290 285 L290 335" stroke="#9FB7C8" stroke-width="2.5" stroke-linecap="round"/>
+  <path d="M360 285 L360 335" stroke="#9FB7C8" stroke-width="2.5" stroke-linecap="round"/>
+  <path d="M430 285 L430 335" stroke="#9FB7C8" stroke-width="2.5" stroke-linecap="round"/>
+  <path d="M500 285 L500 335" stroke="#9FB7C8" stroke-width="2.5" stroke-linecap="round"/>
+  <path d="M570 285 L570 335" stroke="#9FB7C8" stroke-width="2.5" stroke-linecap="round"/>
+  <path d="M640 285 L640 335" stroke="#9FB7C8" stroke-width="2.5" stroke-linecap="round"/>
+
+  <!-- Station Markers (7 stations for R-A-I-L-W-A-Y) -->
+  <circle cx="150" cy="310" r="14" fill="#FEFBF8" stroke="#184A5A" stroke-width="3"/>
+  <circle cx="220" cy="310" r="14" fill="#FEFBF8" stroke="#184A5A" stroke-width="3"/>
+  <circle cx="290" cy="310" r="14" fill="#FEFBF8" stroke="#184A5A" stroke-width="3"/>
+  <circle cx="360" cy="310" r="14" fill="#FEFBF8" stroke="#184A5A" stroke-width="3"/>
+  <circle cx="430" cy="310" r="14" fill="#FEFBF8" stroke="#184A5A" stroke-width="3"/>
+  <circle cx="500" cy="310" r="14" fill="#FEFBF8" stroke="#184A5A" stroke-width="3"/>
+  <circle cx="570" cy="310" r="14" fill="#FEFBF8" stroke="#184A5A" stroke-width="3"/>
+
+  <!-- Inner dots -->
+  <circle cx="150" cy="310" r="6" fill="#184A5A"/>
+  <circle cx="220" cy="310" r="6" fill="#184A5A"/>
+  <circle cx="290" cy="310" r="6" fill="#184A5A"/>
+  <circle cx="360" cy="310" r="6" fill="#184A5A"/>
+  <circle cx="430" cy="310" r="6" fill="#184A5A"/>
+  <circle cx="500" cy="310" r="6" fill="#184A5A"/>
+  <circle cx="570" cy="310" r="6" fill="#184A5A"/>
+
+  <!-- RAIL Loop (circular process at top) -->
+  <circle cx="640" cy="140" r="60" fill="none" stroke="#9FB7C8" stroke-width="2.5"/>
+  <circle cx="640" cy="80" r="10" fill="#184A5A"/>
+  <circle cx="700" cy="140" r="10" fill="#184A5A"/>
+  <circle cx="640" cy="200" r="10" fill="#184A5A"/>
+  <circle cx="580" cy="140" r="10" fill="#184A5A"/>
+
+  <!-- Arrows indicating flow -->
+  <path d="M645 85 L652 92" stroke="#184A5A" stroke-width="2" stroke-linecap="round"/>
+  <path d="M695 145 L688 152" stroke="#184A5A" stroke-width="2" stroke-linecap="round"/>
+  <path d="M635 195 L628 188" stroke="#184A5A" stroke-width="2" stroke-linecap="round"/>
+  <path d="M585 135 L592 128" stroke="#184A5A" stroke-width="2" stroke-linecap="round"/>
+
+  <!-- Connection from RAIL Loop to Railway -->
+  <path d="M640 200 L640 285" stroke="#9FB7C8" stroke-width="2" stroke-dasharray="5,5" stroke-linecap="round"/>
+
+  <!-- Governance pillars (bottom) -->
+  <rect x="120" y="400" width="40" height="80" fill="none" stroke="#1E2A45" stroke-width="2.5"/>
+  <rect x="220" y="400" width="40" height="80" fill="none" stroke="#1E2A45" stroke-width="2.5"/>
+  <rect x="320" y="400" width="40" height="80" fill="none" stroke="#1E2A45" stroke-width="2.5"/>
+  <rect x="420" y="400" width="40" height="80" fill="none" stroke="#1E2A45" stroke-width="2.5"/>
+  <rect x="520" y="400" width="40" height="80" fill="none" stroke="#1E2A45" stroke-width="2.5"/>
+
+  <!-- Pillars fill -->
+  <rect x="125" y="450" width="30" height="25" fill="#9FB7C8" opacity="0.4"/>
+  <rect x="225" y="430" width="30" height="45" fill="#9FB7C8" opacity="0.4"/>
+  <rect x="325" y="440" width="30" height="35" fill="#9FB7C8" opacity="0.4"/>
+  <rect x="425" y="420" width="30" height="55" fill="#9FB7C8" opacity="0.4"/>
+  <rect x="525" y="435" width="30" height="40" fill="#9FB7C8" opacity="0.4"/>
+
+  <!-- Connection lines from stations to pillars -->
+  <path d="M140 335 L140 400" stroke="#9FB7C8" stroke-width="1.5" opacity="0.5"/>
+  <path d="M240 335 L240 400" stroke="#9FB7C8" stroke-width="1.5" opacity="0.5"/>
+  <path d="M340 335 L340 400" stroke="#9FB7C8" stroke-width="1.5" opacity="0.5"/>
+  <path d="M440 335 L440 400" stroke="#9FB7C8" stroke-width="1.5" opacity="0.5"/>
+  <path d="M540 335 L540 400" stroke="#9FB7C8" stroke-width="1.5" opacity="0.5"/>
+</svg>

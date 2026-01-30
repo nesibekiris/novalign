@@ -136,7 +136,14 @@ export function Services() {
                   </Button>
                 </div>
 
-                <div className="space-y-4">
+                <div className="space-y-6">
+                  <div className="bg-white rounded-lg p-6 border border-stratri-divider/30">
+                    <img
+                      src="/illustrations/railway-process.svg"
+                      alt="Railway Framework Process"
+                      className="w-full"
+                    />
+                  </div>
                   <div className="group/rail flex items-start gap-4 p-5 bg-white border border-stratri-divider/50 rounded-sm shadow-[0_1px_2px_rgba(0,0,0,0.04)] hover:border-stratri-accent hover:shadow-[0_3px_8px_rgba(0,0,0,0.08)] hover:-translate-y-0.5 transition-all duration-300 ease-out">
                     <div className="flex-shrink-0 w-12 h-12 bg-stratri-dark rounded-sm flex items-center justify-center transition-transform duration-300 group-hover/rail:scale-110 group-hover/rail:rotate-3">
                       <span className="font-serif text-2xl font-medium text-white">R</span>

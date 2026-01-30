@@ -1,0 +1,42 @@
+<svg width="800" height="600" viewBox="0 0 800 600" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="800" height="600" fill="#FEFBF8"/>
+
+  <!-- Central hub -->
+  <circle cx="400" cy="300" r="50" fill="none" stroke="#1E2A45" stroke-width="3"/>
+  <circle cx="400" cy="300" r="20" fill="#1E2A45"/>
+
+  <!-- Four process tracks radiating outward -->
+  <!-- Top -->
+  <path d="M400 250 L400 100" stroke="#184A5A" stroke-width="3" stroke-linecap="round"/>
+  <path d="M410 250 L410 100" stroke="#184A5A" stroke-width="3" stroke-linecap="round"/>
+  <circle cx="405" cy="120" r="12" fill="#184A5A"/>
+  <circle cx="405" cy="170" r="8" fill="#184A5A"/>
+  <circle cx="405" cy="220" r="8" fill="#184A5A"/>
+
+  <!-- Right -->
+  <path d="M450 300 L600 300" stroke="#184A5A" stroke-width="3" stroke-linecap="round"/>
+  <path d="M450 310 L600 310" stroke="#184A5A" stroke-width="3" stroke-linecap="round"/>
+  <circle cx="480" cy="305" r="8" fill="#184A5A"/>
+  <circle cx="530" cy="305" r="8" fill="#184A5A"/>
+  <circle cx="580" cy="305" r="12" fill="#184A5A"/>
+
+  <!-- Bottom -->
+  <path d="M400 350 L400 500" stroke="#184A5A" stroke-width="3" stroke-linecap="round"/>
+  <path d="M390 350 L390 500" stroke="#184A5A" stroke-width="3" stroke-linecap="round"/>
+  <circle cx="395" cy="380" r="8" fill="#184A5A"/>
+  <circle cx="395" cy="430" r="8" fill="#184A5A"/>
+  <circle cx="395" cy="480" r="12" fill="#184A5A"/>
+
+  <!-- Left -->
+  <path d="M350 300 L200 300" stroke="#184A5A" stroke-width="3" stroke-linecap="round"/>
+  <path d="M350 290 L200 290" stroke="#184A5A" stroke-width="3" stroke-linecap="round"/>
+  <circle cx="220" cy="295" r="12" fill="#184A5A"/>
+  <circle cx="270" cy="295" r="8" fill="#184A5A"/>
+  <circle cx="320" cy="295" r="8" fill="#184A5A"/>
+
+  <!-- Connecting arcs (workflow indicators) -->
+  <path d="M405 120 Q460 120, 480 180 Q490 220, 480 280" stroke="#9FB7C8" stroke-width="2" stroke-dasharray="4,4" fill="none" opacity="0.6"/>
+  <path d="M580 305 Q580 360, 520 410 Q460 450, 395 480" stroke="#9FB7C8" stroke-width="2" stroke-dasharray="4,4" fill="none" opacity="0.6"/>
+  <path d="M220 295 Q200 350, 250 410 Q320 460, 390 480" stroke="#9FB7C8" stroke-width="2" stroke-dasharray="4,4" fill="none" opacity="0.6"/>
+  <path d="M220 295 Q180 220, 250 150 Q320 100, 395 120" stroke="#9FB7C8" stroke-width="2" stroke-dasharray="4,4" fill="none" opacity="0.6"/>
+</svg>

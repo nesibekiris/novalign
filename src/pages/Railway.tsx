@@ -87,6 +87,21 @@ export function Railway() {
         </div>
       </section>
 
+      <section className="py-16 bg-stratri-cream/50">
+        <div className="max-w-5xl mx-auto px-6 lg:px-8">
+          <div className="bg-white rounded-lg p-8 lg:p-12 border border-stratri-divider/30 shadow-sm">
+            <img
+              src="/illustrations/railway-governance.svg"
+              alt="Railway Governance Framework"
+              className="w-full max-w-3xl mx-auto"
+            />
+            <p className="text-center text-sm text-stratri-dark/60 mt-6 font-sans">
+              RAILWAY: 7 istasyon • RAIL Loop: sürekli iyileştirme döngüsü • Governance temelleri
+            </p>
+          </div>
+        </div>
+      </section>
+
       <section className="relative py-20 bg-white overflow-hidden">
         <NetworkPattern />
         <div className="relative max-w-5xl mx-auto px-6 lg:px-8">
