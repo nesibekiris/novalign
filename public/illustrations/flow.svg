@@ -1,0 +1,20 @@
+<svg width="800" height="600" viewBox="0 0 800 600" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="800" height="600" fill="#FEFBF8"/>
+  <rect x="150" y="100" width="120" height="80" rx="8" stroke="#1E2A45" stroke-width="2.5" fill="none"/>
+  <rect x="530" y="100" width="120" height="80" rx="8" stroke="#1E2A45" stroke-width="2.5" fill="none"/>
+  <rect x="340" y="260" width="120" height="80" rx="8" stroke="#184A5A" stroke-width="2.5" fill="none"/>
+  <rect x="150" y="420" width="120" height="80" rx="8" stroke="#9FB7C8" stroke-width="2" fill="none"/>
+  <rect x="530" y="420" width="120" height="80" rx="8" stroke="#9FB7C8" stroke-width="2" fill="none"/>
+  <path d="M210 180 L210 220 Q210 240 230 240 L370 240 Q390 240 390 260" stroke="#184A5A" stroke-width="2" fill="none" marker-end="url(#arrowhead)"/>
+  <path d="M590 180 L590 220 Q590 240 570 240 L430 240 Q410 240 410 260" stroke="#184A5A" stroke-width="2" fill="none" marker-end="url(#arrowhead)"/>
+  <path d="M370 340 L370 380 Q370 400 350 400 L290 400 Q270 400 270 420" stroke="#9FB7C8" stroke-width="2" fill="none" marker-end="url(#arrowhead2)"/>
+  <path d="M430 340 L430 380 Q430 400 450 400 L510 400 Q530 400 530 420" stroke="#9FB7C8" stroke-width="2" fill="none" marker-end="url(#arrowhead2)"/>
+  <defs>
+    <marker id="arrowhead" markerWidth="10" markerHeight="10" refX="5" refY="5" orient="auto">
+      <polygon points="0 0, 10 5, 0 10" fill="#184A5A"/>
+    </marker>
+    <marker id="arrowhead2" markerWidth="10" markerHeight="10" refX="5" refY="5" orient="auto">
+      <polygon points="0 0, 10 5, 0 10" fill="#9FB7C8"/>
+    </marker>
+  </defs>
+</svg>
