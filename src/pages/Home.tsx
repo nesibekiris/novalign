@@ -288,26 +288,26 @@ export function Home() {
 
       <section className="py-24 bg-white">
         <div className="max-w-7xl mx-auto px-6 lg:px-8">
-          <div className="max-w-5xl mx-auto">
-            <h2 className="font-serif text-4xl sm:text-5xl font-medium text-stratri-dark mb-12 text-center uppercase">AI literacy & trainings</h2>
-
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-12">
-              <div className="bg-stratri-cream/30 rounded-sm p-6 border border-stratri-divider/30">
-                <img
-                  src="/illustrations/literacy-growth.svg"
-                  alt="Literacy Growth"
-                  className="w-full"
-                />
-              </div>
-              <div className="bg-stratri-cream/30 rounded-sm p-6 border border-stratri-divider/30">
-                <img
-                  src="/illustrations/literacy-network.svg"
-                  alt="Literacy Network"
-                  className="w-full"
-                />
+          <div className="max-w-3xl mx-auto">
+            <div className="text-center mb-8">
+              <h2 className="font-serif text-4xl sm:text-5xl font-medium text-stratri-dark mb-6 uppercase">AI literacy & trainings</h2>
+              <div className="flex justify-center gap-8 mb-8">
+                <div className="w-24 h-24 opacity-40">
+                  <img
+                    src="/illustrations/literacy-growth.svg"
+                    alt="Literacy Growth"
+                    className="w-full h-full"
+                  />
+                </div>
+                <div className="w-24 h-24 opacity-40">
+                  <img
+                    src="/illustrations/literacy-network.svg"
+                    alt="Literacy Network"
+                    className="w-full h-full"
+                  />
+                </div>
               </div>
             </div>
-
             <div className="bg-stratri-cream rounded-sm p-10 border border-stratri-divider mb-8">
               <div className="space-y-8">
                 {trainings.map((training, index) => (
