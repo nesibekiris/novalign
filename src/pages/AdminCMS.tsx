@@ -1,6 +1,7 @@
 import { useState, useEffect } from 'react';
 import { supabase } from '../lib/supabase';
 import { Button } from '../components/Button';
+import { exportToWordPressFormat, downloadWordPressExport } from '../utils/wordpress-export';
 
 interface Service {
   id: string;
@@ -68,6 +69,7 @@ export function AdminCMS() {
   const [loading, setLoading] = useState(true);
   const [message, setMessage] = useState('');
   const [importing, setImporting] = useState(false);
+  const [exporting, setExporting] = useState(false);
 
   useEffect(() => {
     loadData();
@@ -168,6 +170,22 @@ export function AdminCMS() {
     }
   }
 
+  async function exportToWordPress() {
+    setExporting(true);
+    setMessage('Exporting all content to WordPress format...');
+    try {
+      const data = await exportToWordPressFormat();
+      downloadWordPressExport(data);
+      setMessage('Export complete! Check your downloads folder.');
+      setTimeout(() => setMessage(''), 5000);
+    } catch (error) {
+      console.error('Error exporting:', error);
+      setMessage(`Error exporting: ${error.message}`);
+    } finally {
+      setExporting(false);
+    }
+  }
+
   async function updateTechletterIssue(issue: TechletterIssue) {
     try {
       const { error } = await supabase
@@ -230,20 +248,29 @@ export function AdminCMS() {
       )}
 
       <div className="max-w-7xl mx-auto px-6 py-12">
-        <div className="flex gap-4 mb-8 flex-wrap">
-          {['services', 'railway', 'insights', 'principles', 'techletter'].map((tab) => (
-            <button
-              key={tab}
-              onClick={() => setActiveTab(tab)}
-              className={`px-6 py-3 rounded-sm font-sans font-medium transition-all ${
-                activeTab === tab
-                  ? 'bg-[#184A5A] text-white'
-                  : 'bg-white text-stratri-dark border border-stratri-divider hover:border-stratri-accent'
-              }`}
-            >
-              {tab.charAt(0).toUpperCase() + tab.slice(1)}
-            </button>
-          ))}
+        <div className="flex gap-4 mb-8 flex-wrap items-center justify-between">
+          <div className="flex gap-4 flex-wrap">
+            {['services', 'railway', 'insights', 'principles', 'techletter'].map((tab) => (
+              <button
+                key={tab}
+                onClick={() => setActiveTab(tab)}
+                className={`px-6 py-3 rounded-sm font-sans font-medium transition-all ${
+                  activeTab === tab
+                    ? 'bg-[#184A5A] text-white'
+                    : 'bg-white text-stratri-dark border border-stratri-divider hover:border-stratri-accent'
+                }`}
+              >
+                {tab.charAt(0).toUpperCase() + tab.slice(1)}
+              </button>
+            ))}
+          </div>
+          <button
+            onClick={exportToWordPress}
+            disabled={exporting}
+            className="px-6 py-3 rounded-sm font-sans font-medium bg-stratri-dark text-white hover:bg-[#2a3a58] transition-all disabled:opacity-50 disabled:cursor-not-allowed"
+          >
+            {exporting ? 'Exporting...' : 'Export to WordPress'}
+          </button>
         </div>
 
         {loading ? (
