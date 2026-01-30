@@ -1,0 +1,73 @@
+<svg width="800" height="600" viewBox="0 0 800 600" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="800" height="600" fill="#FEFBF8"/>
+
+  <!-- Central knowledge hub -->
+  <circle cx="400" cy="300" r="60" fill="none" stroke="#1E2A45" stroke-width="3"/>
+  <circle cx="400" cy="300" r="45" fill="none" stroke="#1E2A45" stroke-width="2"/>
+  <circle cx="400" cy="300" r="25" fill="#1E2A45"/>
+
+  <!-- Inner radiating lines -->
+  <path d="M400 275 L400 240" stroke="#1E2A45" stroke-width="2" stroke-linecap="round"/>
+  <path d="M425 300 L460 300" stroke="#1E2A45" stroke-width="2" stroke-linecap="round"/>
+  <path d="M400 325 L400 360" stroke="#1E2A45" stroke-width="2" stroke-linecap="round"/>
+  <path d="M375 300 L340 300" stroke="#1E2A45" stroke-width="2" stroke-linecap="round"/>
+
+  <!-- Learning nodes around the center (8 directions) -->
+  <!-- Top -->
+  <circle cx="400" cy="150" r="20" fill="none" stroke="#184A5A" stroke-width="2.5"/>
+  <circle cx="400" cy="150" r="10" fill="#184A5A"/>
+  <path d="M400 240 L400 150" stroke="#9FB7C8" stroke-width="2" stroke-dasharray="5,5" opacity="0.6"/>
+
+  <!-- Top Right -->
+  <circle cx="530" cy="190" r="20" fill="none" stroke="#184A5A" stroke-width="2.5"/>
+  <circle cx="530" cy="190" r="10" fill="#184A5A"/>
+  <path d="M445 260 L530 190" stroke="#9FB7C8" stroke-width="2" stroke-dasharray="5,5" opacity="0.6"/>
+
+  <!-- Right -->
+  <circle cx="600" cy="300" r="20" fill="none" stroke="#184A5A" stroke-width="2.5"/>
+  <circle cx="600" cy="300" r="10" fill="#184A5A"/>
+  <path d="M460 300 L600 300" stroke="#9FB7C8" stroke-width="2" stroke-dasharray="5,5" opacity="0.6"/>
+
+  <!-- Bottom Right -->
+  <circle cx="530" cy="410" r="20" fill="none" stroke="#184A5A" stroke-width="2.5"/>
+  <circle cx="530" cy="410" r="10" fill="#184A5A"/>
+  <path d="M445 340 L530 410" stroke="#9FB7C8" stroke-width="2" stroke-dasharray="5,5" opacity="0.6"/>
+
+  <!-- Bottom -->
+  <circle cx="400" cy="450" r="20" fill="none" stroke="#184A5A" stroke-width="2.5"/>
+  <circle cx="400" cy="450" r="10" fill="#184A5A"/>
+  <path d="M400 360 L400 450" stroke="#9FB7C8" stroke-width="2" stroke-dasharray="5,5" opacity="0.6"/>
+
+  <!-- Bottom Left -->
+  <circle cx="270" cy="410" r="20" fill="none" stroke="#184A5A" stroke-width="2.5"/>
+  <circle cx="270" cy="410" r="10" fill="#184A5A"/>
+  <path d="M355 340 L270 410" stroke="#9FB7C8" stroke-width="2" stroke-dasharray="5,5" opacity="0.6"/>
+
+  <!-- Left -->
+  <circle cx="200" cy="300" r="20" fill="none" stroke="#184A5A" stroke-width="2.5"/>
+  <circle cx="200" cy="300" r="10" fill="#184A5A"/>
+  <path d="M340 300 L200 300" stroke="#9FB7C8" stroke-width="2" stroke-dasharray="5,5" opacity="0.6"/>
+
+  <!-- Top Left -->
+  <circle cx="270" cy="190" r="20" fill="none" stroke="#184A5A" stroke-width="2.5"/>
+  <circle cx="270" cy="190" r="10" fill="#184A5A"/>
+  <path d="M355 260 L270 190" stroke="#9FB7C8" stroke-width="2" stroke-dasharray="5,5" opacity="0.6"/>
+
+  <!-- Outer connection lines between nodes -->
+  <path d="M400 170 L510 200" stroke="#9FB7C8" stroke-width="1.5" opacity="0.3"/>
+  <path d="M550 210 L590 280" stroke="#9FB7C8" stroke-width="1.5" opacity="0.3"/>
+  <path d="M550 390 L510 400" stroke="#9FB7C8" stroke-width="1.5" opacity="0.3"/>
+  <path d="M380 450 L290 420" stroke="#9FB7C8" stroke-width="1.5" opacity="0.3"/>
+  <path d="M250 400 L210 320" stroke="#9FB7C8" stroke-width="1.5" opacity="0.3"/>
+  <path d="M250 210 L290 200" stroke="#9FB7C8" stroke-width="1.5" opacity="0.3"/>
+
+  <!-- Small person/team indicators at outer nodes -->
+  <rect x="395" y="140" width="10" height="15" rx="1" fill="#184A5A" opacity="0.5"/>
+  <rect x="525" y="180" width="10" height="15" rx="1" fill="#184A5A" opacity="0.5"/>
+  <rect x="595" y="290" width="10" height="15" rx="1" fill="#184A5A" opacity="0.5"/>
+  <rect x="525" y="400" width="10" height="15" rx="1" fill="#184A5A" opacity="0.5"/>
+  <rect x="395" y="440" width="10" height="15" rx="1" fill="#184A5A" opacity="0.5"/>
+  <rect x="265" y="400" width="10" height="15" rx="1" fill="#184A5A" opacity="0.5"/>
+  <rect x="195" y="290" width="10" height="15" rx="1" fill="#184A5A" opacity="0.5"/>
+  <rect x="265" y="180" width="10" height="15" rx="1" fill="#184A5A" opacity="0.5"/>
+</svg>

@@ -44,6 +44,19 @@ export function Services() {
       ],
     },
     {
+      id: 'literacy',
+      title: 'AI Literacy & Training',
+      subtitle: 'Building capability across the organization',
+      intro:
+        'Technology and AI literacy is not just about understanding how models work. It is about building the muscle to ask the right questions, spot risks early, and make informed trade-offs. We design and deliver training programs tailored to different audiences: from board members who need strategic oversight to product teams making daily deployment decisions. Our approach combines conceptual clarity with practical application, so people leave not just informed, but ready to act.',
+      items: [
+        'Executive and board-level AI briefings and workshops',
+        'Team-level training programs on responsible AI practices',
+        'Custom learning paths for different roles and technical backgrounds',
+        'Hands-on sessions with real use cases and decision scenarios',
+      ],
+    },
+    {
       id: 'research',
       title: 'Market & Policy Research',
       subtitle: 'Making sense of shifting markets and rules',
@@ -98,6 +111,26 @@ export function Services() {
                   </div>
                   <p className="font-serif text-lg italic text-stratri-dark/60 mb-6 ml-16">{service.subtitle}</p>
                   <p className="font-sans text-lg text-stratri-dark/80 mb-8 leading-relaxed">{service.intro}</p>
+
+                  {service.id === 'literacy' && (
+                    <div className="mb-8 grid grid-cols-2 gap-4">
+                      <div className="bg-stratri-cream/30 rounded-lg p-4 border border-stratri-divider/20">
+                        <img
+                          src="/illustrations/literacy-growth.svg"
+                          alt="Literacy Growth"
+                          className="w-full"
+                        />
+                      </div>
+                      <div className="bg-stratri-cream/30 rounded-lg p-4 border border-stratri-divider/20">
+                        <img
+                          src="/illustrations/literacy-network.svg"
+                          alt="Literacy Network"
+                          className="w-full"
+                        />
+                      </div>
+                    </div>
+                  )}
+
                   <div className="bg-stratri-cream/50 border border-stratri-divider/30 rounded-sm p-6">
                     <h3 className="font-sans text-sm font-semibold text-stratri-dark uppercase tracking-wide mb-4">What we offer</h3>
                     <ul className="space-y-3">

@@ -11,6 +11,15 @@ const assets = [
     ]
   },
   {
+    category: 'AI Literacy & Training Görselleri',
+    items: [
+      { name: 'Literacy Growth', file: '/illustrations/literacy-growth.svg', description: 'Yetenek gelişimi ve öğrenme basamakları' },
+      { name: 'Literacy Layers', file: '/illustrations/literacy-layers.svg', description: 'Bilgi piramidi ve katmanlar' },
+      { name: 'Literacy Network', file: '/illustrations/literacy-network.svg', description: 'Ekip öğrenmesi ve bilgi paylaşımı' },
+      { name: 'Literacy Journey', file: '/illustrations/literacy-journey.svg', description: 'Öğrenme yolculuğu ve kilometre taşları' },
+    ]
+  },
+  {
     category: 'Blog İllüstrasyonları',
     items: [
       { name: 'Network', file: '/illustrations/network.svg', description: 'Bağlı düğümler ve ağ yapısı' },
@@ -96,7 +105,7 @@ export default function Downloads() {
           Medya İndirmeleri
         </h1>
         <p className="text-lg text-[#1E2A45]/70 mb-12" style={{ fontFamily: 'IBM Plex Sans, sans-serif' }}>
-          3 Railway görseli, 14 blog illüstrasyonu ve 3 logo - SVG veya PNG formatında
+          3 Railway, 4 Literacy & Training, 14 blog illüstrasyonu ve 3 logo - SVG veya PNG formatında
         </p>
 
         {assets.map((category, idx) => (

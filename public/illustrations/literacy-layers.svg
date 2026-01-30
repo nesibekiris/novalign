@@ -1,0 +1,53 @@
+<svg width="800" height="600" viewBox="0 0 800 600" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="800" height="600" fill="#FEFBF8"/>
+
+  <!-- Layered knowledge pyramid -->
+  <!-- Base layer - widest -->
+  <path d="M150 450 L650 450 L600 400 L200 400 Z" fill="none" stroke="#9FB7C8" stroke-width="2.5"/>
+  <path d="M180 425 L620 425" stroke="#9FB7C8" stroke-width="1.5" opacity="0.5"/>
+  <rect x="250" y="410" width="300" height="30" fill="#9FB7C8" opacity="0.3"/>
+
+  <!-- Second layer -->
+  <path d="M200 400 L600 400 L560 350 L240 350 Z" fill="none" stroke="#9FB7C8" stroke-width="2.5"/>
+  <path d="M220 375 L580 375" stroke="#9FB7C8" stroke-width="1.5" opacity="0.5"/>
+  <rect x="280" y="360" width="240" height="30" fill="#9FB7C8" opacity="0.4"/>
+
+  <!-- Third layer -->
+  <path d="M240 350 L560 350 L520 300 L280 300 Z" fill="none" stroke="#184A5A" stroke-width="2.5"/>
+  <path d="M260 325 L540 325" stroke="#184A5A" stroke-width="1.5" opacity="0.5"/>
+  <rect x="310" y="310" width="180" height="30" fill="#184A5A" opacity="0.4"/>
+
+  <!-- Fourth layer -->
+  <path d="M280 300 L520 300 L485 250 L315 250 Z" fill="none" stroke="#184A5A" stroke-width="2.5"/>
+  <path d="M295 275 L505 275" stroke="#184A5A" stroke-width="1.5" opacity="0.5"/>
+  <rect x="340" y="260" width="120" height="30" fill="#184A5A" opacity="0.5"/>
+
+  <!-- Top layer - expertise -->
+  <path d="M315 250 L485 250 L450 200 L350 200 Z" fill="none" stroke="#1E2A45" stroke-width="2.5"/>
+  <path d="M330 225 L470 225" stroke="#1E2A45" stroke-width="1.5" opacity="0.5"/>
+  <rect x="370" y="210" width="60" height="30" fill="#1E2A45" opacity="0.4"/>
+
+  <!-- Peak indicator -->
+  <path d="M350 200 L400 150 L450 200" fill="none" stroke="#1E2A45" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  <circle cx="400" cy="150" r="12" fill="#1E2A45"/>
+  <circle cx="400" cy="150" r="6" fill="#FEFBF8"/>
+
+  <!-- Upward flow arrows on sides -->
+  <path d="M170 440 L180 410" stroke="#9FB7C8" stroke-width="2" stroke-linecap="round"/>
+  <path d="M165 435 L172 415" stroke="#9FB7C8" stroke-width="1.5" stroke-linecap="round"/>
+
+  <path d="M220 390 L230 360" stroke="#9FB7C8" stroke-width="2" stroke-linecap="round"/>
+  <path d="M215 385 L222 365" stroke="#9FB7C8" stroke-width="1.5" stroke-linecap="round"/>
+
+  <path d="M260 340 L270 310" stroke="#184A5A" stroke-width="2" stroke-linecap="round"/>
+  <path d="M255 335 L262 315" stroke="#184A5A" stroke-width="1.5" stroke-linecap="round"/>
+
+  <path d="M630 440 L620 410" stroke="#9FB7C8" stroke-width="2" stroke-linecap="round"/>
+  <path d="M635 435 L628 415" stroke="#9FB7C8" stroke-width="1.5" stroke-linecap="round"/>
+
+  <path d="M580 390 L570 360" stroke="#9FB7C8" stroke-width="2" stroke-linecap="round"/>
+  <path d="M585 385 L578 365" stroke="#9FB7C8" stroke-width="1.5" stroke-linecap="round"/>
+
+  <path d="M540 340 L530 310" stroke="#184A5A" stroke-width="2" stroke-linecap="round"/>
+  <path d="M545 335 L538 315" stroke="#184A5A" stroke-width="1.5" stroke-linecap="round"/>
+</svg>
