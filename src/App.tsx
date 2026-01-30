@@ -9,6 +9,7 @@ import { About } from './pages/About';
 import { Connect } from './pages/Connect';
 import { Admin } from './pages/Admin';
 import { AdminCMS } from './pages/AdminCMS';
+import Downloads from './pages/Downloads';
 
 function App() {
   return (
@@ -25,6 +26,7 @@ function App() {
             <Route path="/connect" element={<Connect />} />
             <Route path="/admin" element={<Admin />} />
             <Route path="/admin/cms" element={<AdminCMS />} />
+            <Route path="/downloads" element={<Downloads />} />
           </Routes>
         </main>
         <Footer />
